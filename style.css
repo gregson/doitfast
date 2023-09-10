@@ -1,0 +1,14 @@
+body {
+  background-color: #007bff;
+  font-family: Arial, sans-serif; }
+
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.doitnow {
+  margin: 28px; }
+
+/*# sourceMappingURL=style.css.map */

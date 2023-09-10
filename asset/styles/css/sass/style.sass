@@ -1,0 +1,23 @@
+// Exemple d'utilisation de variables
+$primary-color: #007bff
+$font-family: Arial, sans-serif
+
+body 
+  background-color: $primary-color
+  font-family: $font-family
+
+
+// Exemple d'utilisation de mixins
+@mixin center-block 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+
+.element 
+  @include center-block
+
+.doitnow
+  margin: 28px
+  
