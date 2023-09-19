@@ -1,0 +1,38 @@
+
+// Exemple d'utilisation de variables
+$primary-color: #007bff;
+$font-family: Arial, sans-serif;
+
+body{
+  background-color: $primary-color;
+  font-family: $font-family;
+}
+
+
+// Exemple d'utilisation de mixins
+@mixin center-block{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.element{
+  @include center-block;
+}
+
+
+// Import des fichiers (par ordre de priorité)
+
+@import 'themes/theme';
+@import 'pages/home';
+@import 'layout/first-section',
+        'layout/services',
+        'layout/value',
+        'layout/history',
+        'layout/footer',
+        'layout/header';
+@import 'components/carousel';
+
+
+
