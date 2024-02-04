@@ -1,4 +1,3 @@
-
 // Exemple d'utilisation de variables
 $primary-color: #007bff;
 $font-family: Arial, sans-serif;
@@ -20,7 +19,6 @@ body{
 .element{
   @include center-block;
 }
-
 
 // Import des fichiers (par ordre de priorité)
 
