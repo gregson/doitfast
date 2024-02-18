@@ -9,279 +9,363 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Bootstrap Icons  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<style>
-
-
-
-</style>
-
 </head>
 
 <body>
-      <div class="container-lg bg-darkblue text-white">
-        <!-- Navbar Start -->
-        <header>
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid justify-content-end">
-              <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-              <div class="collapse navbar-collapse " id="">
-                <ul class="navbar-nav me-auto">
-                  <a href="about.html" class="nav-item nav-link">About Us</a>
-                  <a href="services.html" class="nav-item nav-link">Services</a>
-                  <a href="careers.html" class="nav-item nav-link">Careers</a>
-                  <a href="contact.html" class="nav-item nav-link">Contacts</a>
-                </ul>
-                <form class="d-flex">
-                  <a href="#" class="link-light link-opacity-75 link-underline-light link-underline-opacity-75">EN</a>
-                </form>
+    <!-- Section main  -->  
+    <nav>
+      <header class="navbar navbar-dark justify-content-between">
+        <div class="container">
+          <!-- Logo à gauche -->
+          <a class="navbar-brand" href="#">
+            <img src="images/logo-nav.svg" alt="Logo" width="64" height="66" class="d-inline-block align-top">
+          </a>
+        
+          <!-- Menu à droite -->
+          <button class="side-nav-btn-open btn">
+            <img src="./images/button/nav-btn.svg" alt="button">
+          </button>
+        </div>
+      </header>
+    </nav>
+  
+    <section id="main"> 
+      <!-- div Modal  -->  
+      <div id="sideNav">
+        <div class="container-nav">
+          <div class="modal-header-nav">
+              <div class="left-nav">
+                <img src="./images/big-logo-sidenav.svg" alt="DOITFAST">
+              </div>
+              <div class="right-nav">
+                <button class="side-nav-btn-close btn">
+                  <img src="./images/button/close-btn.svg" alt="close-side-nav">
+                </button>
+              </div>
+          </div>
+          <div class="modal-content-nav">
+            <ul>
+              <li><a href="#doit">ABOUT US</a></li>
+              <li><a href="#values">VALUES</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#contacts">JOBS</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer-nav">
+            <hr>
+            <div class="d-flex flex-row">
+              <div class="p-2">
+                <img src="./images/mini-logo-sidenav.png" alt="doitfast">
+              </div>
+              <div class="p-2">
+                All rights reserved. ©2023 Do IT Fast <br>
+                VAT BE 0769.722.318
               </div>
             </div>
-          </nav>
-        </header>
-        <!-- Navbar End -->
-        <!-- Section Animation -->
-        <section id="anim">
-          <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
-            <div class="text-center">
-              <img
-              src="images/logo_header.svg"
-              alt="logo" />            
-                <h1>Consaltency agency</h1>
-            </div>
-          </div>
-        </section>
-        <!-- Section Animation End -->  
-        <!-- Section Do It -->
-        <section id="doit" class="mb-5">
-          <div class="container-fluid">
-                <!-- Our history -->
-                <div class="row g-2">
-                    <div class="col-lg-6">
-                        <h2 class="big-heading text-uppercase">Why</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor. </p>
-                    </div>
-                    <div class="col-lg-6 ">
-                      <h2 class="big-heading text-uppercase">How</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor. </p>
-                    </div>
-                    <div class="col-lg-6">
-                      <h2 class="big-heading text-uppercase">What</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor. </p>
-                  </div>
-                </div>
-                <div class="d-flex flex-row-reverse">
-                  <div class="p-2"><a href="#"><img src="images/Caroussel_trigger_inactive.svg" alt="Image 1"></a></div>
-                  <div class="p-2"><a href="#"><img src="images/Caroussel_trigger_inactive.svg" alt="Image 1"></a></div>
-                  <div class="p-2"><a href="#"><img src="images/Caroussel_trigger_active.svg" alt="Image 1"></a></div>
-                </div>
-          </div>
-        </section>
-        <!-- Section Do It End -->
-        <!-- Section Our value -->
-        <section class="value mb-5">
-          <div class="container-fluid">
-              <h3 class="text-center text-uppercase medium-heading"><span class="small-size">Our values</span><br>are part of us</h3>
-               <div class="row g-0 mt-5">
-                  <div class="col-lg-3 col-md-12">
-                    <div class="d-flex justify-content-center">
-                      <figure class="thumbnail">
-                          <img src="images/Diversity.svg" alt="Image 1">
-                          <figcaption>Caption 1</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-12">
-                    <div class="d-flex justify-content-center">
-                      <figure class="thumbnail">
-                          <img src="images/Team-Spirit.svg" alt="Image 2">
-                          <figcaption>Caption 2</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-12">
-                    <div class="d-flex justify-content-center">
-                      <figure class="thumbnail">
-                          <img src="images/Solidarity-Collaboration.svg" alt="Image 3">
-                          <figcaption>Caption 3</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-12">
-                    <div class="d-flex justify-content-center">
-                      <figure class="thumbnail">
-                          <img src="images/Personnal-Development.svg" alt="Image 4">
-                          <figcaption>Caption 4</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-            </div>
-         </section>
-        <!-- Section Our value End -->
-        <!-- Section Services -->
-        <section id="services"  class="mb-5">
-          <div class="container-fluid">
-              <div class="row g-0">
-                <!-- User Experience Design -->
-                <div class="col-lg-6">
-                    <h3>User Experience Design</h3>
-                    <p>Vestibulum ultricies bibendum imperdiet. In volutpat pulvinar dui, nec egestas nunc vehicula non. Maecenas accumsan sapien vel laoreet scelerisque. Cras consequat molestie felis. Nunc vitae lacinia lorem. Maecenas non commodo erat, sit amet efficitur libero. Donec quis ipsum turpis. </p>
-                </div>
-                    
-
-              </div>
-              <div class="row g-0">
-                <!-- User Interface Design -->
-                <div class="col-lg-6">
-                  <h3>User Interface Design</h3>
-                  <p>Vestibulum ultricies bibendum imperdiet. In volutpat pulvinar dui, nec egestas nunc vehicula non. Maecenas accumsan sapien vel laoreet scelerisque. Cras consequat molestie felis. Nunc vitae lacinia lorem. Maecenas non commodo erat, sit amet efficitur libero. Donec quis ipsum turpis. </p>
-                </div>
-              </div>
-              <div class="row g-0">
-                <!-- Integration and Publishing -->
-                <div class="col-lg-6">
-                  <h3>Integration and Publishing</h3>
-                  <p>Vestibulum ultricies bibendum imperdiet. In volutpat pulvinar dui, nec egestas nunc vehicula non. Maecenas accumsan sapien vel laoreet scelerisque. Cras consequat molestie felis. Nunc vitae lacinia lorem. Maecenas non commodo erat, sit amet efficitur libero. Donec quis ipsum turpis. </p>
-                </div>
-
-             </div>
-          </div>
-        </section>
-        <!-- Section Services End -->
-        <!-- Section Vacancies -->
-        <section id="vacancies" class="mb-5">
-          <div class="container-fluid">
-                <h2 class="text-uppercase medium-heading">Grow with us</h2>
-                <h3>Our open jobs</h3>
-                  <div class="row g-3 mb-5">
-                    <div class="col-lg-4 col-md-12 ">
-                      <div class="card text-white bg-darkblue-light">
-                        <div class="card-body">
-                          <h4 class="card-title">UI Designer Medior</h4>
-                          <div class="d-flex">
-                            <div class="mr-auto"> <p class="card-text">With supporting text below as a natural lead-in to additional content.</p></div>
-                            <div class="p-2"><a href="#"><img src="images/Target-blank.svg" alt="Image 3"></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 ">
-                      <div class="card text-white bg-darkblue-light">
-                        <div class="card-body">
-                          <h4 class="card-title">UI Designer Senior</h4>
-                          <div class="d-flex">
-                            <div class="mr-auto"> <p class="card-text">With supporting text below as a natural lead-in to additional content.</p></div>
-                            <div class="p-2"><a href="#"><img src="images/Target-blank.svg" alt="Image 3"></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 ">
-                      <div class="card text-white bg-darkblue-light">
-                        <div class="card-body">
-                          <h4 class="card-title">Developpeur Front-End</h4>
-                          <div class="d-flex">
-                            <div class="mr-auto"> <p class="card-text">With supporting text below as a natural lead-in to additional content.</p></div>
-                            <div class="p-2"><a href="#"><img src="images/Target-blank.svg" alt="Image 3"></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <h3>Spontaneous appliction</h3>
-                  <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                          UX Designer
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                          UX Designer
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                          Publisher/Integrator
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <h3>How to apply?</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <div class="d-grid gap-2">
-                    <button class="btn btn-light" type="button">Send my CV</button>
-                  </div>
-          </div>
-          <hr>
-        </section>
-        <!-- Section Vacancies End -->  
-        <!-- Section Contacts -->
-        <section id="contacts">
-          <h2 class="text-uppercase medium-heading">Let's get in touch</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div>
-            <div class="row g-0">
-                <div class="col-lg-3 col-md-12">
-                  <p><strong>E-mail address</strong></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="col-lg-3 col-md-12">
-                  <p><strong>Phone</strong></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="col-lg-3 col-md-12">
-                  <p><strong>Address</strong></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="col-lg-3 col-md-12">
-                  <p><strong>VAT</strong></p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-          </div>
-        </section>
-        <!-- Section Contacts End -->
-        <!-- Footer -->
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-light">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <a class="navbar-brand" href="#">Logo</a>
-            </a>
-            <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
-          </div>
-      
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="text-muted" href="#">
-                Follow us:
-              </a>
-            </li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-            </svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
-        </footer>
-        <!-- Footer End -->
+          </div>    
+        </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
+      <!-- div Modal End --> 
+  
+      <div class="main-content">
+        <div class="centered-content">
+          <img src="images/doit-big-logo.png" alt="Do IT FAST">
+          <div class="text">
+            <h1 class="mt-4">We are almost here</h1>
+          </div>
+        </div>
+        <a class="btn btn-bounce" href="#doit">
+          <img src="./images/button/button-slide.png" alt="slide-button">
+        </a>
+      </div>
+      
+    </section>
+  <!-- Section Do It -->
+  <section id="doit" class="doit-slider">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="1000">
+          <div class="row g-2">
+            <div class="col-12">
+                <h2 class="big-heading text-uppercase">Why</h2>
+                <p>Our purpose is to generate and deliver Great Value and Care to all our stakeholders in the IT world.</p>
+            </div>
+            <div class="col-12 ">
+              <h2 class="big-heading text-uppercase">How</h2>
+              <p>We provide the right resources to our customers. We share value creation and empower our colleagues. We live by our values in a friendly and supportive team.</p>
+            </div>
+            <div class="col-12">
+              <h2 class="big-heading text-uppercase">What</h2>
+              <p>We provide the right resources to our customers. We share value creation and empower our colleagues. We live by our values in a friendly and supportive team.</p>
+          </div>
+        </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <div class="row g-2">
+            <div class="col-12 col-md-8">
+                <h2 class="big-heading text-uppercase">OUR HISTORY</h2>
+                <p>After a strong experience of more than 25 years in the IT fields of Hardware, Networking, Security, training, Soft Dev and Web Dev, our founders decided to join their strength to create Do IT Fast.
+                  <br>
+                  <br>
+                  Fast growing activities since 2019, continuously looking for new opportunities and collaborators.
+                  <br>
+                  <br>
+                  Currently focused on Web Design (UX/UI) and Web Dev.</p>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-2">
+            <div class="col-12 col-md-8">
+              <h2 class="big-heading text-uppercase">OUR PILARS</h2>
+              <p><strong>Well-being</strong><br>Enjoyable team spirit and relations, personal development track and continuous learning.
+                <br>
+                <br>
+                <strong>Job quality</strong><br>
+                Interesting and challenging missions.
+                <br>
+                <br>
+                <strong>Salary package</strong><br>
+                Attractive and efficient.
+                <br>
+                <br>
+              </p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="carousel-indicators d-flex justify-content-end">
+        <button class="btn-spec btn-carousel active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1" aria-current="true"></button>
+        <button class="btn-spec btn-carousel" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button class="btn-spec btn-carousel" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+  <!-- Section Do It End -->
+ 
+  <!-- Section Our value -->
+  <section class="value mb-5" id="values">
+    <div class="container section-spacing">
+        <h3 class="text-uppercase medium-heading"><span class="small-size">Our values</span><br>are part of us</h3>
+          <div class="row g-0 mt-5">
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="d-flex">
+                <figure class="thumbnail">
+                    <img class="value-img" src="images/Diversity.svg" alt="Image 1">
+                    <figcaption>Diversity of background</figcaption>
+                </figure>
+              </div>
+            </div> 
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="d-flex">
+                <figure class="thumbnail">
+                    <img class="value-img" src="images/Team-Spirit.svg" alt="Image 2">
+                    <figcaption>Team spirit</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="d-flex">
+                <figure class="thumbnail">
+                    <img class="value-img" src="images/Solidarity-Collaboration.svg" alt="Image 3">
+                    <figcaption>Solidarity and collaboration</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="d-flex">
+                <figure class="thumbnail">
+                    <img class="value-img" src="images/Personnal-Development-v2.svg" alt="Image 4">
+                    <figcaption>Personal development</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  <!-- Section Our value End -->
+  <!-- Section Services -->
+  <section id="services" class="mb-5">
+    <div class="container-lg services-container section-spacing p-0">
+      <h2 class="text-uppercase medium-heading mx-3">Our Services</h2>
+        <div class="row g-0" id="ux">
+          <!-- User Experience Design -->
+          <div class="col-8 col-lg-8 services-specs">
+              <h3>User Experience Design</h3>
+              <p>Vestibulum ultricies bibendum imperdiet. In volutpat pulvinar dui, nec egestas nunc vehicula non. Maecenas accumsan sapien vel laoreet scelerisque. Cras consequat molestie felis. Nunc vitae lacinia lorem. Maecenas non commodo erat, sit amet efficitur libero. Donec quis ipsum turpis. </p>
+          </div>
+          <div class="col-4 col-lg-4"></div>
+        </div>
+        <div class="row g-0" id="ui">
+          <!-- User Interface Design -->
+          <div class="col-4 col-lg-6"></div>
+          <div class="col-8 col-lg-6 services-specs">
+            <h3>User Interface Design</h3>
+            <p>Vestibulum ultricies bibendum imperdiet. In volutpat pulvinar dui, nec egestas nunc vehicula non. Maecenas accumsan sapien vel laoreet scelerisque. Cras consequat molestie felis. Nunc vitae lacinia lorem. Maecenas non commodo erat, sit amet efficitur libero. Donec quis ipsum turpis. </p>
+          </div>
+        </div>
+        <div class="row g-0" id="int">
+          <!-- Integration and Publishing -->
+          <div class="col-8 col-lg-8 services-specs">
+            <h3>Integration and Publishing</h3>
+            <p>Vestibulum ultricies bibendum imperdiet. In volutpat pulvinar dui, nec egestas nunc vehicula non. Maecenas accumsan sapien vel laoreet scelerisque. Cras consequat molestie felis. Nunc vitae lacinia lorem. Maecenas non commodo erat, sit amet efficitur libero. Donec quis ipsum turpis. </p>
+          </div>
+          <div class="col-4 col-lg-4"></div>
+        </div>
+    </div>
+  </section>
+  <!-- Section Services End -->
+  <!-- Section Vacancies -->
+  <section id="vacancies" class="mb-5">
+    <div class="container section-spacing">
+      <h2 class="text-uppercase medium-heading">Grow with us</h2>
+      <h3 class="py-2">Our open jobs</h3>
+      <div class="row g-3 mb-5">
+        <div class="col-12 col-lg-6">
+          <div class="card text-white bg-darkblue-light">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-8 col-lg-8">
+                  <h4 class="card-title">UX Designer Medior</h4>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="col-4 col-lg-4 d-flex justify-content-center align-items-center">
+                  <div class="p-2">
+                    <a href="#"><img src="images/Target-blank.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 ">
+          <div class="card text-white bg-darkblue-light">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-8 col-lg-8">
+                  <h4 class="card-title">UI Designer Senior</h4>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="col-4 col-lg-4 d-flex justify-content-center align-items-center">
+                  <div class="p-2">
+                    <a href="#"><img src="images/Target-blank.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="card text-white bg-darkblue-light">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-8 col-lg-8">
+                  <h4 class="card-title">Developpeur Front-End</h4>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="col-4 col-lg-4 d-flex justify-content-center align-items-center">
+                  <div class="p-2">
+                    <a href="#"><img src="images/Target-blank.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="job-requirements" class="row g-3 mb-5 spacing">
+        <h3>We are always looking for new talents</h3>
+        <div class="col-12 col-md-8">
+          <div class="accordion rounded" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  UX Designer
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  UX Designer
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor.</div>
+              </div>
+            </div>
+            <div id="accordion-specs-3" class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Publisher/Integrator
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed enim tellus. Aliquam tincidunt dictum viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam eu augue euismod, commodo est nec, volutpat dolor.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row spacing">
+        <div class="col-12 col-md-6">
+          <h3>How to apply?</h3>
+          <p>Send us an email with your CV, we will contact you as soon as possible.</p>
+          <div class="col-12 col-md-8 d-grid gap-2">
+            <a class="btn btn-light btn-color" href="mailto:gba@doitnow.be"><b>Send my CV</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Vacancies End -->  
+  <!-- Section Contacts -->
+  <section id="contacts" class="container spacing-section">
+    <h2 class="text-uppercase medium-heading">Let's get in touch</h2>
+    <div>
+      <div class="row g-0">
+          <div class="col-12 mb-1">
+            <h4><strong>E-mail address</strong></h4>
+            <p><a class="text-decoration-none text-light" href="#">gba@doitnow.be</a></p>
+          </div>
+          <div class="col-12 mb-1">
+            <h4><strong>Phone Number</strong></h4>
+            <p>+32 477 59 15 95</p>
+          </div>
+          <div class="col-12 mb-1">
+            <h4><strong>Address</strong></h4>
+            <p>Avenue des Attelages 24, 1325 Dion-Valmont</p>
+          </div>
+          <div class="col-12 mb-1">
+            <h4><strong>VAT</strong></h4>
+            <p>Do IT Fast<br>
+              BE 0769.722.318</p>
+          </div>
+          <div class="col-12">
+            <h4><strong>Follow us</strong></h4>
+            <p><a href="https://be.linkedin.com/company/doitfast" target="_blank"><i class="bi bi-linkedin medium-heading"></i></a></p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Contacts End -->
+  <!-- Footer -->
+  <footer class="container py-3 my-4 border-top">
+    <div class="row g-0">
+      <div class="col-12 footer-details">
+        <img class="logo-footer" src="./images/logo_header.svg" alt="logo doit">
+        <p class="m-2">All rights reserved.©2024 Do iT Fast <br>VAT BE 0769.722.318</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
 
+  <!-- Script -->
+  <script src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <!-- Script -->
+</body>
 </html>
