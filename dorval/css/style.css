@@ -451,6 +451,10 @@ figure{
   }
 }
 
+.card-body{
+  padding: 20px;
+}
+
 /* Svg */
 /*** Accordeon ***/
 .accordion {
