@@ -424,6 +424,10 @@ figure{
   }
 }
 
+.usp-elements{
+  justify-content: center;
+}
+
 
 #int{
   height: 26rem;
