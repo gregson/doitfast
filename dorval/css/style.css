@@ -278,7 +278,7 @@ figure{
 
 @media (max-width: 480px){
   .carousel-inner{
-    height: 100vh;
+    height: 90vh;
   }
 }
 
