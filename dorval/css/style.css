@@ -247,7 +247,7 @@ h2{
 
 .thumbnail {
   display: flex;
-  text-align: center;
+  text-align: left;
   align-items: center;
   gap: 30px;
 }
@@ -283,8 +283,9 @@ figure{
 }
 
 .carousel-item{
-  padding: 80px 300px;
+  padding: 12rem;
 }
+
 @media (max-width: 480px){
   .carousel-item{
     padding: 15px;
