@@ -9,6 +9,13 @@ body {
   color: white;
 }
 
+.first-element{
+  height: 3rem;
+}
+.last-element{
+  height: 2rem;
+}
+
 h2{
   font-size: 86px;
 }
@@ -61,7 +68,16 @@ h2{
   background-color: #00213C;
   
 }
-
+@media (max-width: 480px){
+  .navbar{
+    z-index: 10; /* Assure que la barre de navigation est au-dessus de tout le contenu */
+    position: fixed !important;
+    top: 0;
+    height: max-content;
+    width: 100%;
+    background-color: #00213C;
+  }
+}
 @media (max-width: 767px) {
   .navbar{
     position: relative;
@@ -154,6 +170,7 @@ h2{
 @media only screen and (max-width: 600px) {
   #sideNav .container-nav {
     padding: 20px 60px; /* Espacement vert et hori */
+    height: 95%;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
@@ -172,7 +189,7 @@ h2{
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centrer verticalement */
-  padding: 40px 0px;
+  /* padding: 40px 0px; */
 }
 .modal-footer-nav{
   color: #00213C;

@@ -47,7 +47,8 @@
               <li><a href="#doit">ABOUT US</a></li>
               <li><a href="#values">VALUES</a></li>
               <li><a href="#services">SERVICES</a></li>
-              <li><a href="#contacts">JOBS</a></li>
+              <li><a href="#vacancies">JOBS</a></li>
+              <li><a href="#contacts">CONTACT</a></li>
             </ul>
           </div>
           <div class="modal-footer-nav">
@@ -69,21 +70,20 @@
       <div class="main-content">
         <div class="centered-content">
           <img src="images/doit-big-logo.png" alt="Do IT FAST">
-          <div class="text">
+          <!-- <div class="text">
             <h1 class="mt-4">We are almost here</h1>
-          </div>
+          </div> -->
         </div>
         <a class="btn btn-bounce" href="#doit">
           <img src="./images/button/button-slide.png" alt="slide-button">
         </a>
       </div>
-      
     </section>
   <!-- Section Do It -->
   <section id="doit" class="doit-slider">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="1000">
+        <div class="carousel-item active" data-bs-interval="5000">
           <div class="row g-2">
             <div class="col-12">
                 <h2 class="big-heading text-uppercase">Why</h2>
@@ -95,11 +95,11 @@
             </div>
             <div class="col-12">
               <h2 class="big-heading text-uppercase">What</h2>
-              <p>We provide the right resources to our customers. We share value creation and empower our colleagues. We live by our values in a friendly and supportive team.</p>
+              <p>We currently focus our services on Web Design (UX and UI) and Wed Dev with a real commitment on customer care.</p>
           </div>
         </div>
         </div>
-        <div class="carousel-item" data-bs-interval="1000">
+        <div class="carousel-item" data-bs-interval="5000">
           <div class="row g-2">
             <div class="col-12 col-md-8">
                 <h2 class="big-heading text-uppercase">OUR HISTORY</h2>
@@ -113,7 +113,7 @@
             </div>
         </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="5000">
           <div class="row g-2">
             <div class="col-12 col-md-8">
               <h2 class="big-heading text-uppercase">OUR PILARS</h2>
@@ -134,17 +134,18 @@
         </div>
       </div>
       <div class="carousel-indicators d-flex justify-content-end">
-        <button class="btn-spec btn-carousel active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1" aria-current="true"></button>
-        <button class="btn-spec btn-carousel" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button class="btn-spec btn-carousel" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+        <button class="btn-spec btn-carousel active" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" aria-label="Slide 1" aria-current="true"></button>
+        <button class="btn-spec btn-carousel" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button class="btn-spec btn-carousel" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
       </div>
     </div>
   </section>
   <!-- Section Do It End -->
  
   <!-- Section Our value -->
-  <section class="value mb-5" id="values">
-    <div class="container section-spacing">
+  <section class="value" id="values">
+    <div class="first-element"></div>
+    <div class="container">
         <h3 class="text-uppercase medium-heading"><span class="small-size">Our values</span><br>are part of us</h3>
           <div class="row g-0 mt-5">
             <div class="col-12 col-md-6 col-lg-3">
@@ -172,7 +173,7 @@
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-              <div class="d-flex justify-content-lg-center">
+              <div class="d-fvlex justify-content-lg-center">
                 <figure class="thumbnail flex-lg-column">
                     <img class="value-img" src="images/Personnal-Development-v2.svg" alt="Image 4">
                     <figcaption>Personal development</figcaption>
@@ -181,11 +182,13 @@
             </div>
           </div>
       </div>
+      <div class="last-element"></div>
     </section>
   <!-- Section Our value End -->
   <!-- Section Services -->
-  <section id="services" class="mb-5">
-    <div class="container-lg services-container section-spacing p-0">
+  <section id="services">
+    <div class="first-element"></div>
+    <div class="container-lg services-container p-0">
       <h2 class="text-uppercase medium-heading mx-3">Our Services</h2>
         <div class="row g-0" id="ux">
           <!-- User Experience Design -->
@@ -232,14 +235,16 @@
           <div class="col-4 col-lg-4"></div>
         </div>
     </div>
+    <div class="last-element"></div>
   </section>
   <!-- Section Services End -->
   <!-- Section Vacancies -->
-  <section id="vacancies" class="mb-5">
-    <div class="container section-spacing">
+  <section id="vacancies">
+    <div class="first-element"></div>
+    <div class="container">
       <h2 class="text-uppercase medium-heading">Grow with us</h2>
-      <h3 class="py-2">Our open jobs</h3>
-      <div class="row g-3 mb-5">
+      <h3 class="py-2 d-none">Our open jobs</h3>
+      <div class="row g-3 mb-5 d-none">
         <div class="col-12 col-lg-6">
           <div class="card text-white bg-darkblue-light">
             <div class="card-body">
@@ -292,7 +297,7 @@
           </div>
         </div>
       </div>
-      <div id="job-requirements" class="row g-3 mb-5 spacing">
+      <div id="job-requirements" class="row g-3 spacing">
         <h3>We are always looking for new talents</h3>
         <div class="col-12 col-md-6">
           <div class="accordion rounded" id="accordionFlushExample">
@@ -370,21 +375,23 @@
         </div>
       </div>
     </div>
+    <div class="last-element"></div>
   </section>
   <!-- Section Vacancies End -->  
   <!-- Section Contacts -->
-  <section id="contacts" class="container spacing-section">
+  <section id="contacts" class="container">
+    <div class="first-element"></div>
     <h2 class="text-uppercase medium-heading mb-3">Let's get in touch</h2>
     <div>
       <div class="row g-0">
         <div class="col-12 d-lg-flex">
           <div class="col-12 col-lg-2 mb-1">
             <h4><strong>E-mail address</strong></h4>
-            <p><a class="text-decoration-none text-light" href="#">info@doitfast.be</a></p>
+            <p><a class="text-decoration-none text-light" href="#">gba@doitnow.be</a></p>
           </div>
           <div class="col-12 col-lg-2 mb-1">
             <h4><strong>Phone Number</strong></h4>
-            <p>+32 477 59 15 95</p>
+            <p>+32 477 59 15 95 <br>(Whatsapp)</p>
           </div>
           <div class="col-12 col-lg-2 mb-1">
             <h4><strong>Address</strong></h4>
@@ -402,6 +409,7 @@
         </div>
       </div>
     </div>
+    <div class="last-element"></div>
   </section>
   <!-- Section Contacts End -->
   <!-- Footer -->
