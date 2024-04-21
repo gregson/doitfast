@@ -165,7 +165,7 @@ h2{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px; /* Espacement vert et hori */
+  padding: 40px 80px; /* Espacement vert et hori */
 }
 @media only screen and (max-width: 600px) {
   #sideNav .container-nav {
@@ -218,7 +218,7 @@ h2{
   flex-direction: column;
   justify-content: center; /* Centrer verticalement */
   align-items: center; /* Centrer horizontalement */
-  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+  height: 90vh; /* Hauteur égale à la hauteur de la fenêtre */
 }
 .centered-content {
   text-align: center;
@@ -433,9 +433,9 @@ figure{
   border-radius: 15px 0px 0px 15px;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 767px) {
   #ui{
-    background-image: url(../images/assets-doit-ui-s.png);
+    background-image: url(../images/assets-doit-ui-s.png) !important;
     background-position: left;
     background-repeat: no-repeat;
   }
@@ -444,6 +444,18 @@ figure{
 @media (max-width: 768px) {
   #ui{
     border-radius: 0px;
+    background-image: url(../images/assets-doit-ui-m2.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 1024px) {
+  #ui{
+    border-radius: 0px;
+    background-image: url(../images/assets-doit-ui-m.png);
+    background-position: left;
+    background-repeat: no-repeat;
   }
 }
 
