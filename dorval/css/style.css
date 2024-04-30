@@ -68,6 +68,7 @@ h2{
   background-color: #00213C;
   
 }
+
 @media (max-width: 480px){
   .navbar{
     z-index: 10; /* Assure que la barre de navigation est au-dessus de tout le contenu */
@@ -138,10 +139,19 @@ h2{
 
 #sideNav li a{
   color: #00213C;
-  font-size: 86px;
+  font-size: 70px;
   font-weight: 600; /* La valeur 600 correspond généralement à semibold dans la plupart des polices */
   text-decoration: none;
+  transition: #00213C 1s;
 }
+
+#sideNav li a:hover{
+  color: white;
+  border-bottom: 2px white solid;
+  padding: 5px;
+  transition: 0.5s ease;
+}
+
 @media only screen and (max-width: 600px) {
   #sideNav ul{
     list-style-type: none;
@@ -153,7 +163,7 @@ h2{
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
   #sideNav li a {
-    font-size: 58px;
+    font-size: 50px;
   }
 }
 
@@ -167,15 +177,24 @@ h2{
   justify-content: space-between;
   padding: 40px 80px; /* Espacement vert et hori */
 }
+
 @media only screen and (max-width: 600px) {
   #sideNav .container-nav {
-    padding: 20px 60px; /* Espacement vert et hori */
-    height: 95%;
+    padding: 20px 30px; /* Espacement vert et hori */
+    height: 52rem;
   }
 }
+
 @media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
   #sideNav .container-nav {
     padding: 60px 60px; /* Espacement vert et hori */
+  }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
+  .left-nav img {
+    height: 7rem;
   }
 }
 
@@ -184,6 +203,7 @@ h2{
   justify-content: space-between;
   align-items: center;
 }
+
 .modal-content-nav {
   flex: 1;
   display: flex;
@@ -191,6 +211,8 @@ h2{
   justify-content: center; /* Centrer verticalement */
   /* padding: 40px 0px; */
 }
+
+
 .modal-footer-nav{
   color: #00213C;
 }
@@ -212,13 +234,23 @@ h2{
   background-size: cover; /* Ajuster la taille de l'image pour couvrir toute la section */
   background-position: center; /* Centrer l'image de fond */
 }
+
 .main-content {
   position: relative; /* Définir la position relative pour que les positions absolues soient relatives à ce conteneur */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centrer verticalement */
   align-items: center; /* Centrer horizontalement */
-  height: 90vh; /* Hauteur égale à la hauteur de la fenêtre */
+  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .main-content{
+    height: 90vh;
+  }
+}
+.logo-doit {
+  width: 10rem;
 }
 .centered-content {
   text-align: center;
@@ -250,7 +282,7 @@ h2{
 @media (max-width: 767px) {
 
   .modal-header-nav img{
-    height: 60px;
+    height: 5rem;
   }
   .side-nav-btn-close img{
     height: 30px;
@@ -305,17 +337,23 @@ figure{
 }
 
 .carousel-item{
-  padding: 12rem;
+  padding: 19rem;
 }
 
-@media (max-width: 480px){
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .carousel-item{
-    padding: 15px;
+    padding: 1rem;
   }
 }
-@media (max-width: 768px){
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .carousel-item{
-    padding:30px;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .carousel-item{
+    padding: 6rem;
   }
 }
 
@@ -410,19 +448,14 @@ figure{
   background-image: url(../images/assets-doit-ux-l.png);
   margin: 50px 0px;
   background-position: right;
-  border-radius: 15px;
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   #ux{
-    background-image: url(../images/assets-doit-ux-s.png);
+    background-image: url(../images/doit-ux-int-bg.jpg);
     background-position: right;
     background-repeat: no-repeat;
-  }
-}
-@media (max-width: 768px) {
-  #ux{
-    border-radius: 0px;
+    background-size: cover;
   }
 }
 
@@ -430,18 +463,18 @@ figure{
   height: 26rem;
   background-image: url(../images/assets-doit-ui-l.png);
   margin: 50px 0px;
-  border-radius: 15px 0px 0px 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   #ui{
-    background-image: url(../images/assets-doit-ui-s.png) !important;
+    background-image: url(../images/doit-ui-bg.jpg);
     background-position: left;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #ui{
     border-radius: 0px;
     background-image: url(../images/assets-doit-ui-m2.png);
@@ -450,7 +483,8 @@ figure{
     background-size: cover;
   }
 }
-@media (max-width: 1024px) {
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   #ui{
     border-radius: 0px;
     background-image: url(../images/assets-doit-ui-m.png);
@@ -469,20 +503,14 @@ figure{
   background-image: url(../images/assets-doit-publishing-l.png);
   margin: 50px 0px;
   background-position: right;
-  border-radius: 15px;
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   #int{
-    background-image: url(../images/assets-doit-publishing-s.png);
+    background-image: url(../images/doit-ux-int-bg.jpg);
     background-position: right;
     background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 768px) {
-  #int{
-    border-radius: 0px;
+    background-size: cover;
   }
 }
 
