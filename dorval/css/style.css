@@ -178,12 +178,19 @@ h2{
   padding: 40px 80px; /* Espacement vert et hori */
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   #sideNav .container-nav {
-    padding: 20px 30px; /* Espacement vert et hori */
-    height: 52rem;
+    padding: 20px 30px;
+    height: 50rem;
   }
 }
+
+/* @media only screen and (max-width: 600px) {
+  #sideNav .container-nav {
+    padding: 20px 30px;
+    height: 52rem;
+  }
+} */
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
   #sideNav .container-nav {
@@ -215,9 +222,8 @@ h2{
   .modal-content-nav {
     flex: 1;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left; /* Centrer verticalement */
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement */
   }
 }
 
