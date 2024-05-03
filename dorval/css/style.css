@@ -169,7 +169,7 @@ body {
     font-size: 48px;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {    /* styles pour les tablettes */
   #sideNav li a {
     font-size: 50px;
   }
@@ -206,10 +206,11 @@ body {
 }
 
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {    /* styles pour les tablettes */
+@media only screen and (min-width: 601px) and (max-width: 1180px) {    /* styles pour les tablettes */
   .left-nav img {
     height: 7rem;
   }
+  
 }
 
 .modal-header-nav {
