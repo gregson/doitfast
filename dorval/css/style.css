@@ -1,6 +1,5 @@
 /********** Template CSS **********/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
-
 body {
   margin:0;
   padding:0;
@@ -182,7 +181,7 @@ h2{
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #sideNav .container-nav {
     padding: 20px 30px;
-    height: 50rem;
+    height: 45rem;
   }
 }
 
