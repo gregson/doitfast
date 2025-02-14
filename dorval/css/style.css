@@ -490,7 +490,7 @@ figure{
 }
 
 #ux{
-  height: 26rem;
+  /* height: 26rem; */
   background-image: url(../images/assets-doit-ux-l.png);
   margin: 50px 0px;
   background-position: right;
@@ -507,7 +507,7 @@ figure{
 }
 
 #ui{
-  height: 26rem;
+  /* height: 26rem; */
   background-image: url(../images/assets-doit-ui-l.png);
   margin: 50px 0px;
 }
@@ -548,7 +548,7 @@ figure{
 
 
 #int{
-  height: 26rem;
+  /* height: 26rem; */
   background-image: url(../images/assets-doit-publishing-l.png);
   margin: 50px 0px;
   background-position: right;
