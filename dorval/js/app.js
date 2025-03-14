@@ -20,3 +20,21 @@ liElements.forEach(li => {
         body.style.overflow = ''; // Réinitialise overflow du body    
     });
 });
+
+
+function setEqualHeight() {
+    let slides = document.querySelectorAll('.carousel-item');
+    let maxHeight = Math.max(...Array.from(slides, slide => {
+        slide.style.height = '';
+        return slide.offsetHeight;
+    }));
+    slides.forEach(slide => slide.style.height = `${maxHeight}px`);
+}
+
+
+// Run the initialization
+setEqualHeight();
+
+// Delay initial call and add it to the end of the event queue
+window.addEventListener('resize', setEqualHeight);
+

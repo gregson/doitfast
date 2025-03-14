@@ -8,7 +8,11 @@ body {
   color: white;
 }
 
-
+/* debug section 
+section {
+  border: solid 1px red;
+}
+*/
 
 .first-element{
   height: 3rem;
@@ -37,7 +41,7 @@ body {
 
 /*** Headings/Text sizes***/
 .big-heading{
-  font-size: 86px;
+  font-size: 60px; /*jp 86px;*/
   text-transform: uppercase;
   font-family: "Radio Canada", sans-serif;
 }
@@ -49,7 +53,7 @@ body {
 
 @media (max-width: 720px){
   .big-heading{
-    font-size: 4em;
+    font-size: 3em; /* JP4em;*/
   }
   .medium-heading{
     font-size: 1.5em;
@@ -179,7 +183,7 @@ body {
   transform: translateX(0);
 }
 #sideNav .container-nav {
-  height: 90%;
+  height: 100%; /*90%; JP*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -249,6 +253,36 @@ body {
     height: 40px;
   }
 }
+
+
+
+
+@media (min-width: 768px){
+  .choose .first-element{
+    height:6rem;  
+  }
+  .value .first-element{
+    height:6rem;  
+  }
+  #services .first-element{
+    height:6rem;  
+  }
+  #vacancies .first-element{
+    height:6rem;  
+  }
+  #contacts .first-element{
+    height:6rem;  
+  }
+
+  .modal-content-nav{
+    margin-left: 5rem;;
+  }
+}
+
+
+
+
+
 
 /*** Main section ***/
 #main {
@@ -350,11 +384,22 @@ figure{
   width: 20px!important;
 }
 
+/* JP tests .carousel-inner{
+  display: table-cell !important;
+  float: none !important;
+}
+.carousel-item .active{
+  display: table !important;
+}*/
 .carousel-indicators .active{
   border-radius: 0 100% 100% 100%;
 }
+.carousel-item{
+  padding-top:20px;
+}
 
 .carousel-inner{
+  /*height: 100vh;*/
   height: 100vh;
   display: flex;
   align-items: center;
@@ -362,7 +407,8 @@ figure{
 
 @media (max-width: 480px){
   .carousel-inner{
-    height: 90vh;
+    height: auto;
+    /*height: 90vh;*/
   }
 }
 
@@ -489,23 +535,32 @@ figure{
   padding: 25px;
 }
 
-#ux{
-  /* height: 26rem; */
-  background-image: url(../images/assets-doit-ux-l.png);
-  margin: 50px 0px;
-  background-position: right;
-}
 
-@media (max-width: 767px) {
+
+@media (min-width: 768px) {
   #ux{
-    background-image: url(../images/doit-ux-int-bg.jpg);
-    background-position: right;
+    /* height: 26rem; */
+    background-image: url(../images/assets-doit-ui-s.png);
+    margin: 50px 0px;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
   }
 }
 
+
+@media (min-width: 992px) {
+  #ux{
+    background-image: url(../images/assets-doit-ui-m.png);
+    background-position-x: -130px;
+  }
+}
+@media (min-width: 1200px) {
+  #ux{
+    background-image: url(../images/assets-doit-ui-m.png);
+    background-position-x: left;
+  }
+}
 #ui{
   /* height: 26rem; */
   background-image: url(../images/assets-doit-ui-l.png);
@@ -547,21 +602,21 @@ figure{
 }
 
 
-#int{
-  /* height: 26rem; */
-  background-image: url(../images/assets-doit-publishing-l.png);
-  margin: 50px 0px;
-  background-position: right;
-}
-
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   #int{
-    background-image: url(../images/doit-ux-int-bg.jpg);
+    /* height: 26rem; */
+    background-image: url(../images/assets-doit-publishing-S.png);
+    margin: 50px 0px;
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+  }
+}
 
+
+media (min-width: 992px) {
+  #int{
+    background-image: url(../images/assets-doit-publishing-l.png);
   }
 }
 
