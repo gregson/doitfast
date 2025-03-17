@@ -129,18 +129,131 @@ section {
 }
 
 /*** Side Navigation ***/
+/* Menu latéral - Style de base
+   ---------------------------- */
 #sideNav {
-  height: 100vh;
+  height: 100%;
   width: 0;
   position: fixed;
   z-index: 1000;
   top: 0;
-  left: 0;
-  background-color: #00213C;
+  right: 0;
+  background-color: #fff;
   overflow-x: hidden;
-  overflow-y: auto;
   transition: 0.3s;
-  -webkit-overflow-scrolling: touch;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenu du menu latéral
+   ----------------------- */
+.modal-content-nav {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Liste des liens du menu
+   ---------------------- */
+.modal-content-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style des éléments de la liste
+   ----------------------------- */
+.modal-content-nav ul li {
+  margin: 0.5rem 0;
+}
+
+.modal-content-nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Effet de survol sur les liens
+   ---------------------------- */
+.modal-content-nav ul li a:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+/* Icônes dans les liens
+   -------------------- */
+.modal-content-nav ul li a i {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Adaptation mobile (tablettes et grands téléphones)
+   ------------------------------------------------ */
+@media (max-width: 768px) {
+  #sideNav {
+    padding-top: 1rem;
+  }
+  
+  .modal-content-nav ul li {
+    margin: 0.35rem 0;
+  }
+  
+  .modal-content-nav ul li a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Les icônes doivent être plus grandes que le texte pour une meilleure lisibilité */
+  .modal-content-nav ul li a i {
+    font-size: 1.1rem;
+    margin-right: 0.6rem;
+  }
+  
+  .social-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* Adaptation très petits écrans
+   ---------------------------- */
+@media (max-width: 360px) {
+  .modal-content-nav ul li a {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Maintien du ratio texte/icône pour la lisibilité */
+  .modal-content-nav ul li a i {
+    font-size: 1.05rem;
+    margin-right: 0.5rem;
+  }
+  
+  .social-link {
+    font-size: 1rem;
+  }
+}
+
+/* Bouton de fermeture du menu
+   -------------------------- */
+.side-nav-btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.side-nav-btn-close:hover {
+  transform: rotate(90deg);
 }
 
 .container-nav {
@@ -277,104 +390,6 @@ section {
 }
 
 /*** Side Nav End ***/
-@media (max-width: 767px) {
-  .modal-footer-nav{
-    font-size: 12px;
-  }
-  .modal-footer-nav img{
-    height: 40px;
-  }
-}
-
-
-
-
-@media (min-width: 768px){
-  .choose .first-element{
-    height:6rem;  
-  }
-  .value .first-element{
-    height:6rem;  
-  }
-  #services .first-element{
-    height:6rem;  
-  }
-  #vacancies .first-element{
-    height:6rem;  
-  }
-  #contacts .first-element{
-    height:6rem;  
-  }
-
-  .modal-content-nav{
-    margin-left: 5rem;;
-  }
-}
-
-
-
-
-
-
-/*** Main section ***/
-#main {
-  height: 100vh;
-  background-image: url('../images/background-body2.svg'); /* Chemin vers votre image de fond */
-  background-size: cover; /* Ajuster la taille de l'image pour couvrir toute la section */
-  background-position: center; /* Centrer l'image de fond */
-}
-
-.main-content {
-  position: relative; /* Définir la position relative pour que les positions absolues soient relatives à ce conteneur */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrer verticalement */
-  align-items: center; /* Centrer horizontalement */
-  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-}
-
-@media screen and (min-width: 220px) and (max-width: 480px) {
-  .main-content{
-    height: 85vh;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .main-content{
-    height: 90vh;
-  }
-}
-
-.logo-doit {
-  width: 10rem;
-}
-.centered-content {
-  text-align: center;
-}
-.main-content .btn {
-  position: absolute; /* Position absolue par rapport au conteneur .main-content */
-  bottom: 20%; /* Positionne le bouton à 20 pixels du bas de .main-content */
-}
-
-.btn-bounce{
-  animation: bounce 2s ease infinite; /* Animation Bounce button */
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
-
-/*** Main section End***/
-
-
 @media (max-width: 767px) {
 
   .modal-header-nav img{
@@ -1041,5 +1056,77 @@ img {
   
   .carousel-caption {
     padding: 1rem 0;
+  }
+}
+
+/*** Main section ***/
+#main {
+  height: 100vh;
+  background-image: url('../images/background-body2.svg'); /* Chemin vers votre image de fond */
+  background-size: cover; /* Ajuster la taille de l'image pour couvrir toute la section */
+  background-position: center; /* Centrer l'image de fond */
+}
+
+.main-content {
+  position: relative; /* Définir la position relative pour que les positions absolues soient relatives à ce conteneur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrer verticalement */
+  align-items: center; /* Centrer horizontalement */
+  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+}
+
+@media screen and (min-width: 220px) and (max-width: 480px) {
+  .main-content{
+    height: 85vh;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .main-content{
+    height: 90vh;
+  }
+}
+
+.logo-doit {
+  width: 10rem;
+}
+.centered-content {
+  text-align: center;
+}
+.main-content .btn {
+  position: absolute; /* Position absolue par rapport au conteneur .main-content */
+  bottom: 20%; /* Positionne le bouton à 20 pixels du bas de .main-content */
+}
+
+.btn-bounce{
+  animation: bounce 2s ease infinite; /* Animation Bounce button */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/*** Main section End***/
+
+
+@media (max-width: 767px) {
+
+  .modal-header-nav img{
+    height: 5rem;
+  }
+  .side-nav-btn-close img{
+    height: 30px;
+  }
+  #sideNav li a{
+    font-size: 48px;
   }
 }
