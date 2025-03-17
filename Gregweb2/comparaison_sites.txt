@@ -59,7 +59,12 @@ Menu Mobile :
   * Police en gras (600)
   * Grands espacements (40px 80px)
   * Effet de survol avec translation et bordure blanche
-  * Icônes Bootstrap pour le menu (bi-list et bi-x-lg)
+  * Icônes Bootstrap modernes (bi-list et bi-x-lg)
+- Animation du menu :
+  * Transition slide depuis la droite
+  * Transform translateX(100%) au repos
+  * Transition fluide en 0.3s ease-in-out
+  * Gestion par classes CSS (.show)
 - Tailles adaptatives :
   * Desktop : 70px
   * Tablette : 50px
