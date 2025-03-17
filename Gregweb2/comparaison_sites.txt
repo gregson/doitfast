@@ -53,30 +53,24 @@ Gregweb2 (Version Améliorée) :
 + Adaptation dynamique à la taille du contenu
 
 Menu Mobile :
-- Style parfaitement unifié avec Dorval :
+- Style identique à Dorval :
   * Fond vert menthe (#8AF0CB)
   * Texte bleu foncé (#00213C)
   * Police en gras (600)
-  * Grands espacements (40px 80px)
-  * Effet de survol avec translation et bordure blanche
-  * Icônes Bootstrap modernes (bi-list et bi-x-lg)
-- Animation du menu :
-  * Transition slide depuis la droite
-  * Transform translateX(100%) au repos
-  * Transition fluide en 0.3s ease-in-out
-  * Gestion par classes CSS (.show)
+  * Animation par translation horizontale
+  * Effet de survol avec bordure blanche
 - Tailles adaptatives :
   * Desktop : 70px
   * Tablette : 50px
   * Mobile : 48px
 - Transitions fluides :
-  * Ouverture/fermeture en 0.5s
+  * Translation du menu en 0.3s
   * Hover des liens en 0.5s
-  * Rotation de la croix en 0.3s
+  * Rotation du bouton en 0.3s
 - Responsive design optimisé :
-  * Ajustement des espacements (20px 30px en mobile)
-  * Redimensionnement du logo
-  * Adaptation de la typographie
+  * Grands espacements (40px 80px)
+  * Adaptation mobile (20px 30px)
+  * Meilleure lisibilité des textes
 
 Dorval :
 + Plus d'animations CSS de base

@@ -134,17 +134,16 @@ section {
 #sideNav {
   height: 100vh;
   width: 100vw;
-  position: fixed;
-  z-index: 1000;
+  position: fixed !important;
+  z-index: 100;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: #8AF0CB;
-  overflow-x: hidden;
-  overflow-y: auto;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  display: block;
 }
 
 #sideNav.show {
@@ -153,10 +152,11 @@ section {
 
 /* Container du menu */
 .container-nav {
-  padding: 40px 80px;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 80px;
   max-width: 100%;
 }
 
@@ -165,8 +165,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  margin-bottom: 2rem;
 }
 
 .modal-header-nav .left-nav img {
@@ -194,7 +192,7 @@ section {
 /* Contenu du menu */
 .modal-content-nav {
   flex-grow: 1;
-  padding: 0;
+  margin: 2rem 0;
 }
 
 .modal-content-nav ul {
@@ -210,19 +208,17 @@ section {
 .modal-content-nav ul li a {
   display: flex;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 5px;
   color: #00213C;
   text-decoration: none;
   font-size: 70px;
   font-weight: 600;
-  transition: all 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .modal-content-nav ul li a:hover {
   color: white;
-  transform: translateX(10px);
   border-bottom: 2px white solid;
-  padding: 5px 0;
 }
 
 .modal-content-nav ul li a i {
@@ -232,7 +228,7 @@ section {
 
 /* Pied de page du menu */
 .modal-footer-nav {
-  padding: 2rem 0 0 0;
+  padding: 1rem 0;
   color: #00213C;
   font-size: 14px;
   font-weight: 500;
@@ -240,7 +236,7 @@ section {
 
 .modal-footer-nav hr {
   border-color: rgba(0, 33, 60, 0.2);
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .modal-footer-nav img {
@@ -253,16 +249,12 @@ section {
     padding: 20px 30px;
   }
 
-  .modal-header-nav .left-nav img {
-    width: 150px;
-  }
-
   .modal-content-nav ul li a {
     font-size: 48px;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
   .modal-content-nav ul li a {
     font-size: 50px;
   }
@@ -835,19 +827,105 @@ figure{
   overflow-x: hidden;
 }
 
-.btn-bounce{
-  animation: bounce 2s infinite; /* Animation Bounce button */
+.btn-bounce {
+  animation: bounce 2s infinite;
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+/* Optimisations des images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Améliorations responsive */
+@media (max-width: 768px) {
+  .big-heading {
+    font-size: 2.5em;
   }
-  40% {
-    transform: translateY(-20px);
+  
+  .medium-heading {
+    font-size: 1.8em;
   }
-  60% {
-    transform: translateY(-10px);
+  
+  .container-nav {
+    padding: 15px;
+  }
+}
+
+/* Optimisations de performance pour les animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    transition: none;
+  }
+  
+  .btn-bounce {
+    animation: none;
+  }
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  transition: height 0.3s ease-in-out;
+}
+
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 15%;
+  opacity: 0.8;
+}
+
+.carousel-indicators {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.carousel-caption {
+  position: relative;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  padding: 1.25rem 0;
+  color: #212529;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    margin-top: 0.5rem;
+  }
+  
+  .carousel-item {
+    padding: 0.5rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .carousel-indicators {
+    margin-top: 0.5rem;
+  }
+  
+  .carousel-caption {
+    padding: 1rem 0;
   }
 }
 
