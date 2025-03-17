@@ -18,36 +18,102 @@ document.addEventListener('DOMContentLoaded', function() {
   openBtn.addEventListener('click', openNav);
   closeBtn.addEventListener('click', closeNav);
 
+  // Gestion améliorée des ancres
   navLinks.forEach(link => {
-    link.addEventListener('click', closeNav);
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        closeNav();
+        setTimeout(() => {
+          const headerOffset = 60;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 300);
+      }
+    });
   });
 
-  // Carrousel responsive
-  function setEqualHeight() {
-    let slides = document.querySelectorAll('.carousel-item');
-    let maxHeight = Math.max(...Array.from(slides, slide => {
-      slide.style.height = '';
-      return slide.offsetHeight;
-    }));
-    slides.forEach(slide => slide.style.height = `${maxHeight}px`);
-  }
+  // Carrousel responsive amélioré
+  const carousel = document.querySelector('.carousel');
+  if (carousel) {
+    const adjustSlideHeight = (activeSlide) => {
+      const height = activeSlide.offsetHeight;
+      const carouselInner = carousel.querySelector('.carousel-inner');
+      carouselInner.style.height = `${height}px`;
+    };
 
-  // Initialisation et gestion du redimensionnement
-  setEqualHeight();
-  window.addEventListener('resize', setEqualHeight);
+    // Observer les changements de slide
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const activeSlide = carousel.querySelector('.carousel-item.active');
+          if (activeSlide) {
+            adjustSlideHeight(activeSlide);
+          }
+        }
+      });
+    });
+
+    // Observer chaque slide
+    const slides = carousel.querySelectorAll('.carousel-item');
+    slides.forEach(slide => {
+      observer.observe(slide, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+    });
+
+    // Ajuster la hauteur initiale
+    const activeSlide = carousel.querySelector('.carousel-item.active');
+    if (activeSlide) {
+      adjustSlideHeight(activeSlide);
+    }
+
+    // Gérer le redimensionnement
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const activeSlide = carousel.querySelector('.carousel-item.active');
+        if (activeSlide) {
+          adjustSlideHeight(activeSlide);
+        }
+      }, 250);
+    });
+
+    // Gérer les transitions
+    carousel.addEventListener('slide.bs.carousel', (event) => {
+      const nextSlide = event.relatedTarget;
+      adjustSlideHeight(nextSlide);
+    });
+  }
 
   // Animations au défilement
   const animateOnScroll = () => {
     const elements = document.querySelectorAll('.animate-on-scroll');
+    const windowHeight = window.innerHeight;
+
     elements.forEach(element => {
       const elementTop = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (elementTop < windowHeight * 0.8) {
+      const elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
         element.classList.add('animate');
       }
     });
   };
 
-  window.addEventListener('scroll', animateOnScroll);
-  animateOnScroll(); // Animation initiale
+  window.addEventListener('scroll', () => {
+    requestAnimationFrame(animateOnScroll);
+  });
+  
+  animateOnScroll();
 });
