@@ -1,40 +1,53 @@
-const triggerSideNav = document.querySelector('.side-nav-btn-open');
-const closeSideNav = document.querySelector('.side-nav-btn-close');
-const modal = document.getElementById('sideNav');
-const body = document.querySelector('body');
-const liElements = document.querySelectorAll('.container-nav li');
+document.addEventListener('DOMContentLoaded', function() {
+  // Navigation latérale
+  const sideNav = document.getElementById('sideNav');
+  const openBtn = document.querySelector('.side-nav-btn-open');
+  const closeBtn = document.querySelector('.side-nav-btn-close');
+  const navLinks = document.querySelectorAll('#sideNav a');
 
-triggerSideNav.addEventListener('click', event => {
-    modal.classList.add('show');
-    body.style.overflow = 'hidden'; // Ajoute overflow: hidden au body
-});
+  function openNav() {
+    sideNav.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+  }
 
-closeSideNav.addEventListener('click', event => {
-    modal.classList.remove('show');
-    body.style.overflow = ''; // Réinitialise overflow du body
-});
+  function closeNav() {
+    sideNav.style.width = '0';
+    document.body.style.overflow = '';
+  }
 
-liElements.forEach(li => {
-    li.addEventListener('click', event => {
-        modal.classList.remove('show');
-        body.style.overflow = ''; // Réinitialise overflow du body    
-    });
-});
+  openBtn.addEventListener('click', openNav);
+  closeBtn.addEventListener('click', closeNav);
 
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
 
-function setEqualHeight() {
+  // Carrousel responsive
+  function setEqualHeight() {
     let slides = document.querySelectorAll('.carousel-item');
     let maxHeight = Math.max(...Array.from(slides, slide => {
-        slide.style.height = '';
-        return slide.offsetHeight;
+      slide.style.height = '';
+      return slide.offsetHeight;
     }));
     slides.forEach(slide => slide.style.height = `${maxHeight}px`);
-}
+  }
 
+  // Initialisation et gestion du redimensionnement
+  setEqualHeight();
+  window.addEventListener('resize', setEqualHeight);
 
-// Run the initialization
-setEqualHeight();
+  // Animations au défilement
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (elementTop < windowHeight * 0.8) {
+        element.classList.add('animate');
+      }
+    });
+  };
 
-// Delay initial call and add it to the end of the event queue
-window.addEventListener('resize', setEqualHeight);
-
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll(); // Animation initiale
+});
