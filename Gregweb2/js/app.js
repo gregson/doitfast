@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // Gestionnaires d'événements
-  openBtn.addEventListener('click', openNav);
-  closeBtn.addEventListener('click', closeNav);
+  openBtn?.addEventListener('click', openNav);
+  closeBtn?.addEventListener('click', closeNav);
 
   // Fermer le menu lors du clic sur un lien
   menuLinks.forEach(link => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Carrousel responsive amélioré
+  // Carrousel
   const carousel = document.querySelector('.carousel');
   if (carousel) {
     const adjustSlideHeight = (activeSlide) => {
@@ -44,19 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
       carouselInner.style.height = `${height}px`;
     };
 
-    // Observer les changements de slide
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-          const activeSlide = carousel.querySelector('.carousel-item.active');
-          if (activeSlide) {
-            adjustSlideHeight(activeSlide);
-          }
+        if (mutation.target.classList.contains('active')) {
+          adjustSlideHeight(mutation.target);
         }
       });
     });
 
-    // Observer chaque slide
     const slides = carousel.querySelectorAll('.carousel-item');
     slides.forEach(slide => {
       observer.observe(slide, {
@@ -65,29 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    // Ajuster la hauteur initiale
+    window.addEventListener('resize', () => {
+      const activeSlide = carousel.querySelector('.carousel-item.active');
+      if (activeSlide) {
+        adjustSlideHeight(activeSlide);
+      }
+    });
+
+    // Ajustement initial
     const activeSlide = carousel.querySelector('.carousel-item.active');
     if (activeSlide) {
       adjustSlideHeight(activeSlide);
     }
-
-    // Gérer le redimensionnement
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        const activeSlide = carousel.querySelector('.carousel-item.active');
-        if (activeSlide) {
-          adjustSlideHeight(activeSlide);
-        }
-      }, 250);
-    });
-
-    // Gérer les transitions
-    carousel.addEventListener('slide.bs.carousel', (event) => {
-      const nextSlide = event.relatedTarget;
-      adjustSlideHeight(nextSlide);
-    });
   }
 
   // Animations au défilement
