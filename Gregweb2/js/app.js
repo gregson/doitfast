@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // Gestionnaires d'événements
-  openBtn.addEventListener('click', openNav);
-  closeBtn.addEventListener('click', closeNav);
+  if (openBtn) openBtn.addEventListener('click', openNav);
+  if (closeBtn) closeBtn.addEventListener('click', closeNav);
 
   // Fermer le menu lors du clic sur un lien
   menuLinks.forEach(link => {
