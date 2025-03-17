@@ -23,6 +23,8 @@ Gregweb2 (Version Améliorée) :
 + Menu mobile optimisé avec icônes Bootstrap et liens sociaux
 + Gestion améliorée des ancres et du défilement
 + Tailles de police optimisées pour différents écrans mobiles
++ Carrousel avec ajustement dynamique de la hauteur
++ Observation des changements de slide avec MutationObserver
 
 Dorval :
 + Plus de composants Bootstrap utilisés
@@ -31,6 +33,7 @@ Dorval :
 - Accessibilité limitée
 - Menu mobile basique sans icônes
 - Pas d'adaptation fine des tailles de police en mobile
+- Carrousel avec hauteur fixe problématique en mobile
 
 Design et Interface
 ------------------
@@ -45,6 +48,9 @@ Gregweb2 (Version Améliorée) :
 + Meilleure gestion des espacements
 + Tailles de police adaptatives (0.9rem - 1.2rem)
 + Support des très petits écrans (<360px)
++ Carrousel avec transitions fluides et contrôles optimisés
++ Indicateurs de slide repositionnés pour une meilleure lisibilité
++ Adaptation dynamique à la taille du contenu
 
 Dorval :
 + Plus d'animations CSS de base
@@ -53,6 +59,7 @@ Dorval :
 - Interface moins cohérente
 - Pas d'optimisation mobile poussée
 - Pas de support spécifique pour les très petits écrans
+- Carrousel avec contrôles standards non optimisés
 
 Contenu et Fonctionnalités
 -------------------------
@@ -72,6 +79,8 @@ Gregweb2 (Version Améliorée) :
 + Menu mobile optimisé pour les performances
 + Gestion améliorée du défilement
 + Optimisation des tailles de police pour réduire le CLS
++ Carrousel avec transitions optimisées et chargement dynamique
++ Observation efficace des changements d'état avec MutationObserver
 
 Dorval :
 - Pas d'optimisation des ressources
@@ -79,6 +88,7 @@ Dorval :
 - Animations non optimisées
 - Menu mobile moins performant
 - CLS potentiel dû aux tailles de police non optimisées
+- Carrousel avec redimensionnement brutal
 
 Accessibilité
 ------------
@@ -107,5 +117,6 @@ Après les améliorations, Gregweb2 offre maintenant :
 5. Un menu mobile moderne et optimisé avec icônes et liens sociaux
 6. Une expérience utilisateur cohérente et professionnelle
 7. Une excellente lisibilité sur tous les appareils mobiles
+8. Un carrousel responsive avec ajustement dynamique du contenu
 
 Dorval pourrait bénéficier des améliorations apportées à Gregweb2, notamment en termes de performance, d'accessibilité et d'expérience mobile.
