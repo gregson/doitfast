@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Navigation latérale
+  // Gestion du menu latéral
   const sideNav = document.getElementById('sideNav');
   const openBtn = document.querySelector('.side-nav-btn-open');
   const closeBtn = document.querySelector('.side-nav-btn-close');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const menuLinks = document.querySelectorAll('.modal-content-nav ul li a');
 
   // Fonction pour ouvrir le menu
   const openNav = () => {
@@ -17,33 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = '';
   };
 
-  // Écouteurs d'événements pour les boutons
+  // Gestionnaires d'événements
   openBtn.addEventListener('click', openNav);
   closeBtn.addEventListener('click', closeNav);
 
-  // Fermer le menu quand on clique sur un lien
-  navLinks.forEach(link => {
-    link.addEventListener('click', closeNav);
-  });
-
-  // Gestion améliorée des ancres
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
+  // Fermer le menu lors du clic sur un lien
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeNav();
+      const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
-      
       if (targetElement) {
-        closeNav();
         setTimeout(() => {
-          const headerOffset = 60;
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+          targetElement.scrollIntoView({ behavior: 'smooth' });
         }, 300);
       }
     });
