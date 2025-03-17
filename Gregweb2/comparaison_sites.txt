@@ -20,7 +20,7 @@ Gregweb2 (Version Améliorée) :
 + Optimisation des performances avec will-change
 + Support de prefers-reduced-motion
 + Dimensions d'images spécifiées pour éviter le CLS
-+ Menu mobile optimisé avec icônes Bootstrap et liens sociaux
++ Menu mobile optimisé
 + Gestion améliorée des ancres et du défilement
 + Tailles de police optimisées pour différents écrans mobiles
 + Carrousel avec ajustement dynamique de la hauteur
@@ -31,7 +31,7 @@ Dorval :
 + Structure de dossiers plus complète
 - Pas d'optimisation des performances
 - Accessibilité limitée
-- Menu mobile basique sans icônes
+- Menu mobile basique
 - Pas d'adaptation fine des tailles de police en mobile
 - Carrousel avec hauteur fixe problématique en mobile
 
@@ -42,7 +42,7 @@ Gregweb2 (Version Améliorée) :
 + Effet de fondu à l'entrée des éléments
 + Animation de rebond pour le bouton de défilement
 + Transitions fluides optimisées
-+ Menu mobile avec icônes Bootstrap et liens sociaux
++ Menu mobile avec style unifié et icônes intégrées
 + Animations de survol sur les liens du menu
 + Interface cohérente en anglais
 + Meilleure gestion des espacements
@@ -51,6 +51,27 @@ Gregweb2 (Version Améliorée) :
 + Carrousel avec transitions fluides et contrôles optimisés
 + Indicateurs de slide repositionnés pour une meilleure lisibilité
 + Adaptation dynamique à la taille du contenu
+
+Menu Mobile :
+- Style parfaitement unifié avec Dorval :
+  * Fond bleu foncé (#00213C)
+  * Texte blanc avec opacité 0.7 au repos
+  * Police légère (font-weight: 300)
+  * Grands espacements (padding 2rem)
+  * Effet de survol avec translation et opacité
+  * Rotation du bouton de fermeture
+- Tailles adaptatives :
+  * Desktop : 48px
+  * Tablette : 32px
+  * Mobile : 28px
+- Transitions fluides :
+  * Ouverture/fermeture en 0.5s
+  * Hover des liens en 0.3s
+  * Rotation du bouton en 0.3s
+- Responsive design optimisé :
+  * Ajustement des espacements
+  * Redimensionnement du logo
+  * Adaptation de la typographie
 
 Dorval :
 + Plus d'animations CSS de base
@@ -114,7 +135,7 @@ Après les améliorations, Gregweb2 offre maintenant :
 2. Une meilleure accessibilité avec les attributs ARIA
 3. Des animations plus fluides et respectueuses des préférences utilisateur
 4. Une structure de code plus propre et maintenable
-5. Un menu mobile moderne et optimisé avec icônes et liens sociaux
+5. Un menu mobile moderne et optimisé avec icônes et style unifié
 6. Une expérience utilisateur cohérente et professionnelle
 7. Une excellente lisibilité sur tous les appareils mobiles
 8. Un carrousel responsive avec ajustement dynamique du contenu

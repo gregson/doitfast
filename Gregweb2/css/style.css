@@ -133,43 +133,62 @@ section {
    ---------------------------- */
 #sideNav {
   height: 100vh;
-  width: 100vw;
+  width: 0;
   position: fixed;
   z-index: 1000;
   top: 0;
-  right: 0;
-  background-color: #8AF0CB;
+  left: 0;
+  background-color: #00213C;
   overflow-x: hidden;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  transition: 0.5s;
+  -webkit-overflow-scrolling: touch;
 }
 
-#sideNav.show {
-  transform: translateX(0);
-}
-
-/* Contenu du menu latéral
-   ----------------------- */
+/* Container du menu */
 .container-nav {
+  padding: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+}
+
+/* En-tête du menu */
+.modal-header-nav {
+  display: flex;
   justify-content: space-between;
-  padding: 40px 80px;
+  align-items: center;
+  padding: 2rem;
+  background-color: #00213C;
 }
 
-@media (max-width: 767px) {
-  .container-nav {
-    padding: 20px 30px;
-  }
+.modal-header-nav .left-nav img {
+  height: auto;
+  width: 200px;
 }
 
-/* Liste des liens du menu
-   ---------------------- */
+.side-nav-btn-close {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.side-nav-btn-close:hover {
+  transform: rotate(90deg);
+}
+
+.side-nav-btn-close img {
+  height: 30px;
+  width: 30px;
+}
+
+/* Contenu du menu */
 .modal-content-nav {
-  position: relative;
-  width: 100%;
-  padding: 2rem 0;
+  flex-grow: 1;
+  padding: 2rem;
 }
 
 .modal-content-nav ul {
@@ -178,8 +197,6 @@ section {
   margin: 0;
 }
 
-/* Style des éléments de la liste
-   ----------------------------- */
 .modal-content-nav ul li {
   margin: 1rem 0;
 }
@@ -187,75 +204,99 @@ section {
 .modal-content-nav ul li a {
   display: flex;
   align-items: center;
-  padding: 0.5rem 0;
-  color: #00213C;
+  padding: 1rem;
+  color: #fff;
   text-decoration: none;
-  font-size: 70px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 48px;
+  font-weight: 300;
+  transition: 0.3s;
+  opacity: 0.7;
 }
 
-/* Effet de survol sur les liens
-   ---------------------------- */
 .modal-content-nav ul li a:hover {
-  color: white;
-  border-bottom: 2px white solid;
-  padding: 5px 0;
+  opacity: 1;
+  transform: translateX(10px);
 }
 
-/* Icônes dans les liens
-   -------------------- */
 .modal-content-nav ul li a i {
-  margin-right: 1rem;
-  font-size: 60px;
-  color: #00213C;
-  transition: color 0.3s ease;
+  margin-right: 1.5rem;
+  font-size: 0.8em;
+  opacity: 0.7;
 }
 
 .modal-content-nav ul li a:hover i {
-  color: white;
+  opacity: 1;
 }
 
-/* Adaptation mobile
-   --------------- */
-@media only screen and (max-width: 600px) {
+/* Pied de page du menu */
+.modal-footer-nav {
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  background-color: #00213C;
+  font-weight: 300;
+}
+
+.modal-footer-nav hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0;
+}
+
+.modal-footer-nav img {
+  height: 40px;
+  opacity: 0.7;
+}
+
+/* Adaptations mobiles */
+@media (max-width: 768px) {
+  .modal-header-nav {
+    padding: 1.5rem;
+  }
+
+  .modal-header-nav .left-nav img {
+    width: 150px;
+  }
+
+  .modal-content-nav {
+    padding: 1.5rem;
+  }
+
+  .modal-content-nav ul li {
+    margin: 0.8rem 0;
+  }
+
   .modal-content-nav ul li a {
-    font-size: 48px;
+    font-size: 32px;
+    padding: 0.8rem;
   }
-  
-  .modal-content-nav ul li a i {
-    font-size: 40px;
+
+  .modal-footer-nav {
+    padding: 1.5rem;
+    font-size: 12px;
   }
 }
 
-/* Adaptation tablettes
-   ------------------ */
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
+@media (max-width: 360px) {
+  .modal-header-nav {
+    padding: 1rem;
+  }
+
+  .modal-header-nav .left-nav img {
+    width: 120px;
+  }
+
+  .modal-content-nav {
+    padding: 1rem;
+  }
+
   .modal-content-nav ul li a {
-    font-size: 50px;
+    font-size: 28px;
+    padding: 0.6rem;
   }
-  
-  .modal-content-nav ul li a i {
-    font-size: 42px;
+
+  .modal-footer-nav {
+    padding: 1rem;
   }
-}
-
-/* Bouton de fermeture du menu
-   -------------------------- */
-.side-nav-btn-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.side-nav-btn-close:hover {
-  transform: rotate(90deg);
 }
 
 /*** Side Nav End ***/
@@ -641,8 +682,8 @@ figure{
 /*** Accordeon ***/
 .accordion {
   background-color: #0d2c46;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3e%3c/svg%3e%0A");
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3e%3c/svg%3e%0A");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3E%3C/svg%3E%0A");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3E%3C/svg%3E%0A");
   --bs-accordion-btn-bg:#0d2c46;
   --bs-accordion-active-bg:#0d2c46;
   --bs-accordion-active-color:white;
