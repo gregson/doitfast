@@ -242,33 +242,37 @@ section {
   }
   
   .modal-content-nav ul li {
-    margin: 0.4rem 0;
+    margin: 0.35rem 0;
   }
   
   .modal-content-nav ul li a {
-    padding: 0.7rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
   }
   
   .modal-content-nav ul li a i {
-    font-size: 1rem;
-    margin-right: 0.7rem;
+    font-size: 0.9rem;
+    margin-right: 0.6rem;
   }
   
   .social-link {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 360px) {
   .modal-content-nav ul li a {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
   }
   
   .modal-content-nav ul li a i {
-    font-size: 0.95rem;
-    margin-right: 0.6rem;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+  }
+  
+  .social-link {
+    font-size: 1rem;
   }
 }
 
@@ -1023,7 +1027,7 @@ img {
   .carousel-item {
     padding: 0.5rem;
   }
-  
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 10%;
