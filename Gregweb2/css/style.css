@@ -132,28 +132,46 @@ section {
 /* Menu latéral - Style de base
    ---------------------------- */
 #sideNav {
-  height: 100%;
-  width: 0;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   z-index: 1000;
   top: 0;
   right: 0;
-  background-color: #00213C;
+  background-color: #8AF0CB;
   overflow-x: hidden;
-  transition: 0.3s;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#sideNav.show {
+  transform: translateX(0);
 }
 
 /* Contenu du menu latéral
    ----------------------- */
-.modal-content-nav {
-  position: relative;
-  width: 100%;
-  padding: 2rem;
+.container-nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+
+@media (max-width: 767px) {
+  .container-nav {
+    padding: 20px 30px;
+  }
 }
 
 /* Liste des liens du menu
    ---------------------- */
+.modal-content-nav {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
 .modal-content-nav ul {
   list-style: none;
   padding: 0;
@@ -163,70 +181,62 @@ section {
 /* Style des éléments de la liste
    ----------------------------- */
 .modal-content-nav ul li {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .modal-content-nav ul li a {
   display: flex;
   align-items: center;
-  padding: 0.8rem 1.2rem;
-  color: #fff;
+  padding: 0.5rem 0;
+  color: #00213C;
   text-decoration: none;
-  border-radius: 8px;
+  font-size: 70px;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 /* Effet de survol sur les liens
    ---------------------------- */
 .modal-content-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateX(5px);
+  color: white;
+  border-bottom: 2px white solid;
+  padding: 5px 0;
 }
 
 /* Icônes dans les liens
    -------------------- */
 .modal-content-nav ul li a i {
-  margin-right: 0.8rem;
-  font-size: 1.2rem;
-  color: #5bedb8;
+  margin-right: 1rem;
+  font-size: 60px;
+  color: #00213C;
   transition: color 0.3s ease;
 }
 
-/* Adaptation mobile (tablettes et grands téléphones)
-   ------------------------------------------------ */
-@media (max-width: 768px) {
-  #sideNav {
-    padding-top: 1rem;
-  }
-  
-  .modal-content-nav ul li {
-    margin: 0.35rem 0;
-  }
-  
+.modal-content-nav ul li a:hover i {
+  color: white;
+}
+
+/* Adaptation mobile
+   --------------- */
+@media only screen and (max-width: 600px) {
   .modal-content-nav ul li a {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.85rem;
+    font-size: 48px;
   }
   
-  /* Les icônes doivent être plus grandes que le texte pour une meilleure lisibilité */
   .modal-content-nav ul li a i {
-    font-size: 1.1rem;
-    margin-right: 0.6rem;
+    font-size: 40px;
   }
 }
 
-/* Adaptation très petits écrans
-   ---------------------------- */
-@media (max-width: 360px) {
+/* Adaptation tablettes
+   ------------------ */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
   .modal-content-nav ul li a {
-    padding: 0.5rem 0.7rem;
-    font-size: 0.8rem;
+    font-size: 50px;
   }
   
-  /* Maintien du ratio texte/icône pour la lisibilité */
   .modal-content-nav ul li a i {
-    font-size: 1.05rem;
-    margin-right: 0.5rem;
+    font-size: 42px;
   }
 }
 
@@ -246,80 +256,6 @@ section {
 
 .side-nav-btn-close:hover {
   transform: rotate(90deg);
-}
-
-.container-nav {
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.modal-content-nav {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.modal-content-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.modal-content-nav ul li {
-  margin: 0.8rem 0;
-}
-
-.modal-content-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-}
-
-.modal-content-nav ul li a:hover,
-.modal-content-nav ul li a:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateX(10px);
-}
-
-.modal-content-nav ul li a i {
-  font-size: 1.3rem;
-  margin-right: 1rem;
-  opacity: 0.8;
-}
-
-.side-nav-btn-open,
-.side-nav-btn-close {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.side-nav-btn-open:hover,
-.side-nav-btn-close:hover {
-  transform: scale(1.1);
-}
-
-.modal-footer-nav {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /*** Side Nav End ***/
@@ -705,8 +641,8 @@ figure{
 /*** Accordeon ***/
 .accordion {
   background-color: #0d2c46;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3E%3C/svg%3E%0A");
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3E%3C/svg%3E%0A");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3e%3c/svg%3e%0A");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M19 30C19 30.5523 19.4477 31 20 31C20.5523 31 21 30.5523 21 30L19 30ZM20.7071 9.29289C20.3166 8.90237 19.6834 8.90237 19.2929 9.29289L12.9289 15.6569C12.5384 16.0474 12.5384 16.6805 12.9289 17.0711C13.3195 17.4616 13.9526 17.4616 14.3431 17.0711L20 11.4142L25.6569 17.0711C26.0474 17.4616 26.6805 17.4616 27.0711 17.0711C27.4616 16.6805 27.4616 16.0474 27.0711 15.6569L20.7071 9.29289ZM21 30L21 10L19 10L19 30L21 30Z' fill='%235BEDB8'/%3e%3c/svg%3e%0A");
   --bs-accordion-btn-bg:#0d2c46;
   --bs-accordion-active-bg:#0d2c46;
   --bs-accordion-active-color:white;

@@ -3,20 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
   const sideNav = document.getElementById('sideNav');
   const openBtn = document.querySelector('.side-nav-btn-open');
   const closeBtn = document.querySelector('.side-nav-btn-close');
-  const navLinks = document.querySelectorAll('#sideNav a');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  function openNav() {
-    sideNav.style.width = '100%';
+  // Fonction pour ouvrir le menu
+  const openNav = () => {
+    sideNav.classList.add('show');
     document.body.style.overflow = 'hidden';
-  }
+  };
 
-  function closeNav() {
-    sideNav.style.width = '0';
+  // Fonction pour fermer le menu
+  const closeNav = () => {
+    sideNav.classList.remove('show');
     document.body.style.overflow = '';
-  }
+  };
 
+  // Écouteurs d'événements pour les boutons
   openBtn.addEventListener('click', openNav);
   closeBtn.addEventListener('click', closeNav);
+
+  // Fermer le menu quand on clique sur un lien
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
 
   // Gestion améliorée des ancres
   navLinks.forEach(link => {
