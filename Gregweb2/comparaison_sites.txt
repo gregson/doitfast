@@ -20,12 +20,15 @@ Gregweb2 (Version Améliorée) :
 + Optimisation des performances avec will-change
 + Support de prefers-reduced-motion
 + Dimensions d'images spécifiées pour éviter le CLS
++ Menu mobile optimisé avec icônes et liens sociaux
++ Gestion améliorée des ancres et du défilement
 
 Dorval :
 + Plus de composants Bootstrap utilisés
 + Structure de dossiers plus complète
 - Pas d'optimisation des performances
 - Accessibilité limitée
+- Menu mobile basique sans icônes
 
 Design et Interface
 ------------------
@@ -34,14 +37,18 @@ Gregweb2 (Version Améliorée) :
 + Effet de fondu à l'entrée des éléments
 + Animation de rebond pour le bouton de défilement
 + Transitions fluides optimisées
-+ Meilleure gestion des espacements (classes g-4)
-+ Version mobile optimisée
-+ Carrousel avec indicateurs visuels améliorés
++ Menu mobile avec icônes Bootstrap et liens sociaux
++ Animations de survol sur les liens du menu
++ Tailles de police optimisées pour mobile
++ Interface cohérente en anglais
++ Meilleure gestion des espacements
 
 Dorval :
 + Plus d'animations CSS de base
 + Transitions simples
 + Menu latéral avec effet de transition différent
+- Interface moins cohérente
+- Pas d'optimisation mobile poussée
 
 Contenu et Fonctionnalités
 -------------------------
@@ -58,11 +65,14 @@ Gregweb2 (Version Améliorée) :
 + Animations optimisées avec will-change
 + Support des préférences de mouvement réduit
 + JavaScript plus efficace
++ Menu mobile optimisé pour les performances
++ Gestion améliorée du défilement
 
 Dorval :
 - Pas d'optimisation des ressources
 - Pas de préchargement
 - Animations non optimisées
+- Menu mobile moins performant
 
 Accessibilité
 ------------
@@ -71,10 +81,13 @@ Gregweb2 (Version Améliorée) :
 + Descriptions d'images détaillées
 + Support de prefers-reduced-motion
 + Navigation au clavier améliorée
++ Icônes avec labels descriptifs
++ Meilleure structure sémantique du menu
 
 Dorval :
 - Accessibilité basique
 - Descriptions d'images limitées
+- Structure moins sémantique
 
 Conclusion
 ----------
@@ -83,5 +96,7 @@ Après les améliorations, Gregweb2 offre maintenant :
 2. Une meilleure accessibilité avec les attributs ARIA
 3. Des animations plus fluides et respectueuses des préférences utilisateur
 4. Une structure de code plus propre et maintenable
+5. Un menu mobile moderne et optimisé avec icônes et liens sociaux
+6. Une expérience utilisateur cohérente et professionnelle
 
-Dorval pourrait bénéficier des améliorations apportées à Gregweb2, notamment en termes de performance et d'accessibilité.
+Dorval pourrait bénéficier des améliorations apportées à Gregweb2, notamment en termes de performance, d'accessibilité et d'expérience mobile.
