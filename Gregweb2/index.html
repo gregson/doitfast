@@ -49,21 +49,46 @@
             <img src="./images/big-logo-sidenav.svg" alt="DOITFAST" width="200" height="80">
           </div>
           <div class="right-nav">
-            <button class="side-nav-btn-close btn" aria-label="Fermer le menu">
-              <img src="./images/button/close-btn.svg" alt="Fermer" width="30" height="30">
+            <button class="side-nav-btn-close btn" aria-label="Close menu">
+              <img src="./images/button/close-btn.svg" alt="Close" width="30" height="30">
             </button>
           </div>
         </div>
-        <nav class="modal-content-nav" aria-label="Menu principal">
+        <nav class="modal-content-nav" aria-label="Main navigation">
           <ul>
-            <li><a href="#doit" data-section="doit">À PROPOS</a></li>
-            <li><a href="#choose" data-section="choose">POURQUOI NOUS</a></li>
-            <li><a href="#values" data-section="values">NOS VALEURS</a></li>
-            <li><a href="#services" data-section="services">SERVICES</a></li>
-            <li><a href="#vacancies" data-section="vacancies">EMPLOIS</a></li>
-            <li><a href="#contacts" data-section="contacts">CONTACT</a></li>
+            <li><a href="#doit" data-section="doit" class="nav-link">
+              <i class="bi bi-info-circle me-2"></i>ABOUT US
+            </a></li>
+            <li><a href="#choose" data-section="choose" class="nav-link">
+              <i class="bi bi-check2-circle me-2"></i>CHOOSE US
+            </a></li>
+            <li><a href="#values" data-section="values" class="nav-link">
+              <i class="bi bi-heart me-2"></i>VALUES
+            </a></li>
+            <li><a href="#services" data-section="services" class="nav-link">
+              <i class="bi bi-gear me-2"></i>SERVICES
+            </a></li>
+            <li><a href="#vacancies" data-section="vacancies" class="nav-link">
+              <i class="bi bi-briefcase me-2"></i>JOBS
+            </a></li>
+            <li><a href="#contacts" data-section="contacts" class="nav-link">
+              <i class="bi bi-envelope me-2"></i>CONTACT
+            </a></li>
           </ul>
         </nav>
+        <div class="modal-footer-nav">
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <!-- div Modal End --> 
@@ -72,8 +97,8 @@
       <div class="centered-content">
         <img class="logo-doit" src="images/logo-nav.svg" alt="Do IT FAST" width="200" height="200">
       </div>
-      <a href="#doit" class="btn btn-bounce" aria-label="Défiler vers la section À propos">
-        <img src="./images/goutte.svg" alt="Défiler vers le bas" width="40" height="40">
+      <a href="#doit" class="btn btn-bounce" aria-label="Scroll to About section">
+        <img src="./images/goutte.svg" alt="Scroll down" width="40" height="40">
       </a>
     </div>
   </section>
