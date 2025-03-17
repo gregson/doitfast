@@ -130,83 +130,86 @@ section {
 
 /*** Side Navigation ***/
 #sideNav {
-  height: 100%;
+  height: 100vh;
   width: 0;
   position: fixed;
-  z-index: 9999;
+  z-index: 1000;
   top: 0;
   left: 0;
-  background-color: #003B73;
+  background-color: #00213C;
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 0;
-  will-change: width;
-  transition: width 0.3s ease-in-out;
+  overflow-y: auto;
+  transition: 0.3s;
+  -webkit-overflow-scrolling: touch;
 }
 
 .container-nav {
   height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
 }
 
 .modal-header-nav {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 4rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .modal-content-nav {
-  flex-grow: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .modal-content-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .modal-content-nav ul li {
-  margin-bottom: 2rem;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .modal-content-nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1.2rem;
+  padding: 1rem;
+  display: block;
+  transition: background-color 0.3s;
 }
 
-.modal-content-nav ul li a:hover {
-  color: #5bedb8;
-}
-
-.modal-footer-nav {
-  margin-top: auto;
-  color: white;
-  font-size: 0.9rem;
-}
-
-.modal-footer-nav hr {
-  border-color: rgba(255, 255, 255, 0.2);
-  margin: 1rem 0;
+.modal-content-nav ul li a:hover,
+.modal-content-nav ul li a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .side-nav-btn-open,
 .side-nav-btn-close {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.5rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.side-nav-btn-open:hover,
-.side-nav-btn-close:hover {
-  transform: scale(1.1);
+@media (max-width: 768px) {
+  #sideNav {
+    padding-top: 1rem;
+  }
+  
+  .modal-content-nav ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .modal-content-nav ul li a {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
 }
 
 /*** Side Nav End ***/

@@ -45,50 +45,35 @@
     <div id="sideNav">
       <div class="container-nav">
         <div class="modal-header-nav">
-            <div class="left-nav animate-on-scroll">
-              <img src="./images/big-logo-sidenav.svg" alt="DOITFAST" width="200" height="80">
-            </div>
-            <div class="right-nav">
-              <button class="side-nav-btn-close btn" aria-label="Close side navigation">
-                <img src="./images/button/close-btn.svg" alt="Close menu" width="30" height="30">
-              </button>
-            </div>
-        </div>
-        <div class="modal-content-nav">
-          <ul>
-            <li><a href="#doit" class="animate-on-scroll">ABOUT US</a></li>
-            <li><a href="#choose" class="animate-on-scroll">CHOOSE US</a></li>
-            <li><a href="#values" class="animate-on-scroll">VALUES</a></li>
-            <li><a href="#services" class="animate-on-scroll">SERVICES</a></li>
-            <li><a href="#vacancies" class="animate-on-scroll">JOBS</a></li>
-            <li><a href="#contacts" class="animate-on-scroll">CONTACT</a></li>
-          </ul>
-        </div>
-        <div class="modal-footer-nav">
-          <hr>
-          <div class="d-flex flex-row">
-            <div class="p-2">
-              <img src="./images/mini-logo-sidenav.png" alt="doitfast">
-            </div>
-            <div class="p-2">
-              All rights reserved. &copy;2025 Do IT Fast <br>
-              VAT BE 0769.722.318
-            </div>
+          <div class="left-nav">
+            <img src="./images/big-logo-sidenav.svg" alt="DOITFAST" width="200" height="80">
           </div>
-        </div>    
+          <div class="right-nav">
+            <button class="side-nav-btn-close btn" aria-label="Fermer le menu">
+              <img src="./images/button/close-btn.svg" alt="Fermer" width="30" height="30">
+            </button>
+          </div>
+        </div>
+        <nav class="modal-content-nav" aria-label="Menu principal">
+          <ul>
+            <li><a href="#doit" data-section="doit">À PROPOS</a></li>
+            <li><a href="#choose" data-section="choose">POURQUOI NOUS</a></li>
+            <li><a href="#values" data-section="values">NOS VALEURS</a></li>
+            <li><a href="#services" data-section="services">SERVICES</a></li>
+            <li><a href="#vacancies" data-section="vacancies">EMPLOIS</a></li>
+            <li><a href="#contacts" data-section="contacts">CONTACT</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
     <!-- div Modal End --> 
   
     <div class="main-content">
-      <div class="centered-content animate-on-scroll">
+      <div class="centered-content">
         <img class="logo-doit" src="images/logo-nav.svg" alt="Do IT FAST" width="200" height="200">
-        <!-- <div class="text">
-          <h1 class="mt-4">We are almost here</h1>
-        </div> -->
       </div>
-      <a class="btn btn-bounce" href="#doit" aria-label="Scroll to About section">
-        <img src="./images/goutte.svg" alt="Scroll down" width="40" height="40">
+      <a href="#doit" class="btn btn-bounce" aria-label="Défiler vers la section À propos">
+        <img src="./images/goutte.svg" alt="Défiler vers le bas" width="40" height="40">
       </a>
     </div>
   </section>

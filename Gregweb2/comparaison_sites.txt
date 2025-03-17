@@ -1,0 +1,87 @@
+Comparaison des Sites Gregweb2 et Dorval
+=====================================
+
+Structure Générale
+-----------------
+Points Communs :
+- Navigation principale avec menu latéral
+- Sections principales identiques (About Us, Choose Us, Values, Services, Jobs, Contact)
+- Utilisation de Bootstrap 5.3.1
+- Design responsive
+- Animations et transitions fluides
+
+Différences Techniques
+---------------------
+Gregweb2 (Version Améliorée) :
++ JavaScript optimisé et séparé dans app.js
++ Préchargement des ressources critiques
++ Meilleures pratiques d'accessibilité (aria-labels)
++ Structure HTML plus propre et mieux commentée
++ Optimisation des performances avec will-change
++ Support de prefers-reduced-motion
++ Dimensions d'images spécifiées pour éviter le CLS
+
+Dorval :
++ Plus de composants Bootstrap utilisés
++ Structure de dossiers plus complète
+- Pas d'optimisation des performances
+- Accessibilité limitée
+
+Design et Interface
+------------------
+Gregweb2 (Version Améliorée) :
++ Nouvelles animations au défilement
++ Effet de fondu à l'entrée des éléments
++ Animation de rebond pour le bouton de défilement
++ Transitions fluides optimisées
++ Meilleure gestion des espacements (classes g-4)
++ Version mobile optimisée
++ Carrousel avec indicateurs visuels améliorés
+
+Dorval :
++ Plus d'animations CSS de base
++ Transitions simples
++ Menu latéral avec effet de transition différent
+
+Contenu et Fonctionnalités
+-------------------------
+Points Communs :
+- Même contenu textuel
+- Mêmes sections et structure d'information
+- Navigation fluide entre les sections
+
+Performance
+----------
+Gregweb2 (Version Améliorée) :
++ Préchargement des ressources critiques
++ Images optimisées avec dimensions
++ Animations optimisées avec will-change
++ Support des préférences de mouvement réduit
++ JavaScript plus efficace
+
+Dorval :
+- Pas d'optimisation des ressources
+- Pas de préchargement
+- Animations non optimisées
+
+Accessibilité
+------------
+Gregweb2 (Version Améliorée) :
++ Attributs aria-label complets
++ Descriptions d'images détaillées
++ Support de prefers-reduced-motion
++ Navigation au clavier améliorée
+
+Dorval :
+- Accessibilité basique
+- Descriptions d'images limitées
+
+Conclusion
+----------
+Après les améliorations, Gregweb2 offre maintenant :
+1. Une meilleure performance grâce aux optimisations
+2. Une meilleure accessibilité avec les attributs ARIA
+3. Des animations plus fluides et respectueuses des préférences utilisateur
+4. Une structure de code plus propre et maintenable
+
+Dorval pourrait bénéficier des améliorations apportées à Gregweb2, notamment en termes de performance et d'accessibilité.
