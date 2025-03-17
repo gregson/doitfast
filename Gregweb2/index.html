@@ -24,17 +24,17 @@
 
 <body>
   <!-- Section main  -->  
-  <nav aria-label="Main navigation">
+  <nav>
     <header class="navbar navbar-dark justify-content-between">
       <div class="container">
         <!-- Logo à gauche -->
-        <a class="navbar-brand animate-on-scroll" href="#" aria-label="Home">
+        <a class="navbar-brand" href="#">
           <img src="images/logo-nav.svg" alt="Logo" width="64" height="66" class="d-inline-block align-top">
         </a>
       
         <!-- Menu à droite -->
-        <button class="side-nav-btn-open btn" aria-label="Open side navigation">
-          <img src="./images/button/nav-btn.svg" alt="Menu button" width="30" height="30">
+        <button class="side-nav-btn-open btn">
+          <i class="bi bi-list" style="color: white; font-size: 2rem;"></i>
         </button>
       </div>
     </header>
@@ -45,50 +45,37 @@
     <div id="sideNav">
       <div class="container-nav">
         <div class="modal-header-nav">
-          <div class="left-nav">
-            <img src="./images/big-logo-sidenav.svg" alt="DOITFAST" width="200" height="80">
-          </div>
-          <div class="right-nav">
-            <button class="side-nav-btn-close btn" aria-label="Close menu">
-              <img src="./images/button/close-btn.svg" alt="Close" width="30" height="30">
-            </button>
-          </div>
+            <div class="left-nav">
+              <img src="./images/big-logo-sidenav.svg" alt="DOITFAST">
+            </div>
+            <div class="right-nav">
+              <button class="side-nav-btn-close btn">
+                <i class="bi bi-x-lg" style="color: #00213C; font-size: 2rem;"></i>
+              </button>
+            </div>
         </div>
-        <nav class="modal-content-nav" aria-label="Main navigation">
+        <div class="modal-content-nav">
           <ul>
-            <li><a href="#doit" data-section="doit" class="nav-link">
-              <i class="bi bi-info-circle me-2"></i>ABOUT US
-            </a></li>
-            <li><a href="#choose" data-section="choose" class="nav-link">
-              <i class="bi bi-check2-circle me-2"></i>CHOOSE US
-            </a></li>
-            <li><a href="#values" data-section="values" class="nav-link">
-              <i class="bi bi-heart me-2"></i>VALUES
-            </a></li>
-            <li><a href="#services" data-section="services" class="nav-link">
-              <i class="bi bi-gear me-2"></i>SERVICES
-            </a></li>
-            <li><a href="#vacancies" data-section="vacancies" class="nav-link">
-              <i class="bi bi-briefcase me-2"></i>JOBS
-            </a></li>
-            <li><a href="#contacts" data-section="contacts" class="nav-link">
-              <i class="bi bi-envelope me-2"></i>CONTACT
-            </a></li>
+            <li><a href="#doit">ABOUT US</a></li>
+            <li><a href="#choose">CHOOSE US</a></li>
+            <li><a href="#values">VALUES</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#vacancies">JOBS</a></li>
+            <li><a href="#contacts">CONTACT</a></li>
           </ul>
-        </nav>
-        <div class="modal-footer-nav">
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter">
-              <i class="bi bi-twitter-x"></i>
-            </a>
-            <a href="#" class="social-link" aria-label="GitHub">
-              <i class="bi bi-github"></i>
-            </a>
-          </div>
         </div>
+        <div class="modal-footer-nav">
+          <hr>
+          <div class="d-flex flex-row">
+            <div class="p-2">
+              <img src="./images/mini-logo-sidenav.png" alt="doitfast">
+            </div>
+            <div class="p-2">
+              All rights reserved. &copy;2025 Do IT Fast <br>
+              VAT BE 0769.722.318
+            </div>
+          </div>
+        </div>    
       </div>
     </div>
     <!-- div Modal End --> 
