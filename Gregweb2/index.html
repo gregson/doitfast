@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap and Custom Stylesheet  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="css/style.css?V=1.0.2" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sideNav = document.getElementById('sideNav');
+      const openBtn = document.querySelector('.side-nav-btn-open');
+      const closeBtn = document.querySelector('.side-nav-btn-close');
+      const navLinks = document.querySelectorAll('#sideNav a');
+
+      function openNav() {
+        sideNav.style.width = '100%';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeNav() {
+        sideNav.style.width = '0';
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openNav);
+      closeBtn.addEventListener('click', closeNav);
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeNav);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Section main  -->  
+  <nav aria-label="Main navigation">
+    <header class="navbar navbar-dark justify-content-between">
+      <div class="container">
+        <!-- Logo à gauche -->
+        <a class="navbar-brand" href="#" aria-label="Home">
+          <img src="images/logo-nav.svg" alt="Logo" width="64" height="66" class="d-inline-block align-top">
+        </a>
+      
+        <!-- Menu à droite -->
+        <button class="side-nav-btn-open btn" aria-label="Open side navigation">
+          <img src="./images/button/nav-btn.svg" alt="button">
+        </button>
+      </div>
+    </header>
+  </nav>
+  
+  <section id="main"> 
+    <!-- div Modal  -->  
+    <div id="sideNav">
+      <div class="container-nav">
+        <div class="modal-header-nav">
+            <div class="left-nav">
+              <img src="./images/big-logo-sidenav.svg" alt="DOITFAST">
+            </div>
+            <div class="right-nav">
+              <button class="side-nav-btn-close btn" aria-label="Close side navigation">
+                <img src="./images/button/close-btn.svg" alt="close-side-nav">
+              </button>
+            </div>
+        </div>
+        <div class="modal-content-nav">
+          <ul>
+            <li><a href="#doit">ABOUT US</a></li>
+            <li><a href="#choose">CHOOSE US</a></li>
+            <li><a href="#values">VALUES</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#vacancies">JOBS</a></li>
+            <li><a href="#contacts">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="modal-footer-nav">
+          <hr>
+          <div class="d-flex flex-row">
+            <div class="p-2">
+              <img src="./images/mini-logo-sidenav.png" alt="doitfast">
+            </div>
+            <div class="p-2">
+              All rights reserved. &copy;2025 Do IT Fast <br>
+              VAT BE 0769.722.318
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+    <!-- div Modal End --> 
+  
+    <div class="main-content">
+      <div class="centered-content">
+        <img class="logo-doit" src="images/logo-nav.svg" alt="Do IT FAST">
+        <!-- <div class="text">
+          <h1 class="mt-4">We are almost here</h1>
+        </div> -->
+      </div>
+      <a class="btn btn-bounce" href="#doit">
+        <img src="./images/goutte.svg" alt="slide-button">
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Do It -->
+  <section id="doit" class="doit-slider visible-md">
+    <div class="container-md">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="row g-4">
+              <div class="col-12 col-lg-10 mx-auto">
+                <h2 class="big-heading">Why</h2>
+                <p>We are here to <strong>generate and deliver exceptional value and care</strong> to all our stakeholders in the IT world. By understanding your unique challenges, we help you achieve your goals through tailored digital solutions.</p>
+              </div>
+              <div class="col-12 col-lg-10 mx-auto">
+                <h2 class="big-heading">How</h2>
+                <p>
+                  <strong>Tailored resources for your success</strong>
+                  <br>
+                  We provide our clients with the <strong>right people, tools, and expertise</strong> to help them thrive in an ever-changing digital landscape.
+                </p>
+                <p>
+                  <strong>Empowering people</strong>
+                  <br>
+                  Our team members are our greatest asset. We empower them through continuous training, personal growth opportunities, and a culture that fosters creativity, collaboration, and support.
+                </p>
+                <p>
+                  <strong>Values you can trust</strong>
+                  <br>
+                  At the heart of our agency is a <strong>commitment to quality, transparency, and customer care</strong>, ensuring that every interaction with us adds real value to your business.
+                </p>
+              </div>
+              <div class="col-12 col-lg-10 mx-auto mb-5">
+                <h2 class="big-heading">What</h2>
+                <p>
+                  We specialize in <strong>Web Design (UX/UI)</strong> and <strong>Web Development</strong>, focusing on creating digital experiences that drive results. From <strong>user research and creative design</strong> to <strong>performance-driven web development</strong>, we are committed to delivering projects that resonate with your audience.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="row g-4">
+              <div class="col-12 col-lg-10 mx-auto">
+                <h2 class="big-heading">OUR HISTORY</h2>
+                <div class="d-md-none">
+                  <p>
+                    With over <strong>25 years of experience</strong> in IT — spanning Hardware, Networking, Security, Training, Software Development, and Web Development — our founders combined their expertise to launch <strong>Do IT Fast</strong> in 2019. Since then, we have grown rapidly, constantly seizing new opportunities and building a team of skilled professionals.
+                  </p>
+                  <p>
+                    Today, our focus is on <strong>Web Design (UX/UI)</strong> and <strong>Web Development</strong>, delivering <strong>tailored, high-quality solutions</strong> with speed, precision, and a commitment to excellence.
+                  </p>
+                </div>
+                <div class="d-none d-md-block">
+                  <p>
+                    With over <strong>25 years of extensive experience</strong> across various IT domains — ranging from <strong>Hardware, Networking, and Security</strong> to <strong>Training, Software Development, and Web Development</strong> — our founders decided to pool their expertise and create <strong>Do IT Fast</strong>.
+                  </p>
+                  <p>
+                    Since our establishment in <strong>2019</strong>, we have experienced <strong>rapid growth</strong>, continuously seizing new opportunities and building a talented team of collaborators.
+                  </p>
+                  <p>
+                    Today, we focus our efforts on <strong>Web Design (UX/UI)</strong> and <strong>Web Development</strong>, providing our clients with innovative solutions tailored to their needs. Our mission is to deliver <strong>high-quality services</strong> with speed, precision, and a commitment to excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="row g-4">
+              <div class="col-12 col-lg-10 mx-auto">
+                <h2 class="big-heading">OUR PILLARS</h2>
+                <div class="d-md-none">
+                  <ul class="list-unstyled">
+                    <li class="mb-3"><strong>Well-being first:</strong> A supportive team spirit, personalized development plans, and continuous learning to stay ahead in the digital space.</li>
+                    <li class="mb-3"><strong>Challenging projects:</strong> Meaningful missions that foster growth for both our employees and clients.</li>
+                    <li class="mb-3"><strong>Competitive salaries:</strong> Attractive packages that value and reward our team's contributions.</li>
+                  </ul>
+                </div>
+                <div class="d-none d-md-block">
+                  <ul class="list-unstyled">
+                    <li class="mb-4">
+                      <strong>Well-being first:</strong>
+                      <ul class="mt-2">
+                        <li>A supportive and friendly team spirit.</li>
+                        <li>A personalized development plan for every employee.</li>
+                        <li>Continuous learning opportunities to stay ahead in the digital space.</li>
+                      </ul>
+                    </li>
+                    <li class="mb-4">
+                      <strong>Quality jobs and exciting missions:</strong>
+                      <ul class="mt-2">
+                        <li>We offer challenging and meaningful projects that help our employees grow and our clients succeed.</li>
+                      </ul>
+                    </li>
+                    <li class="mb-4">
+                      <strong>Competitive salary packages:</strong>
+                      <ul class="mt-2">
+                        <li>Attractive and efficient salary packages, ensuring our people feel valued for their contributions.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Why choose us -->
+  <section class="choose" id="choose">
+    <div class="first-element"></div>
+    <div class="container-md">
+      <h2 class="big-heading">Why choose us?</h2>
+      <div class="row spacing">
+        <div class="col-12 col-md-10">
+          <p>
+            In a world of constant digital evolution, <strong>we listen to your needs</strong> and provide <strong>customized, cost-effective solutions</strong>. Whether you&#39;re a business seeking cutting-edge web solutions or a digital expert looking for a fulfilling career, we are here to make an impact.
+          </p>
+          <p>
+            Our <strong>commitment to continuous training</strong> ensures that our team remains at the forefront of industry trends and technology.
+          </p>
+        </div>
+      </div>
+      <div class="row spacing">
+        <div class="col-12 col-md-10">
+          <h3 class="medium-heading">A partnership that benefits everyone </h3>
+          <div class="d-md-none">
+            <p>
+              We combine a deep understanding of your challenges with highly skilled professionals who meet your expectations. By investing in our team&#39;s continuous growth, we ensure they stay ahead of industry trends, delivering digital experiences that inspire, engage, and drive results.
+            </p>
+          </div>
+          <div class="d-none d-md-block">
+            <p>
+              Our approach is rooted in partnership. By understanding your challenges and ambitions, we provide you with professionals who meet the expectations.
+            </p>
+            <p>
+              At the same time, we invest in our team members&#39; continuous growth, ensuring they remain at the forefront of industry trends and innovations. This unique approach guarantees that your business benefits from a team that is both highly skilled and deeply motivated.
+            </p>
+            <p>
+              Together, we create digital experiences that inspire, engage, and deliver results.
+            </p>
+          </div>  
+        </div>
+      </div>
+      <div class="row spacing">
+        <div class="col-12 col-md-10">
+          <h3 class="medium-heading">Empowering talent to solve your digital challenges </h3>
+            <p>
+              At Do IT, we understand the challenges that businesses face in a fast-evolving digital landscape. Whether it&#39;s creating user-centered designs or ensuring seamless digital integrations, we are your trusted partner. Our employees are not just skilled professionals—they are continuously trained to adapt to your needs, while growing their own expertise.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Why choose us END--> 
+  <!-- Section Our value -->
+  <section class="value" id="values">
+    <div class="first-element"></div>
+    <div class="container-md">
+        <h3 class="medium-heading">Our values</h3>
+        <h2 class="big-heading">are part of us</h2>
+          <div class="row g-0 mt-5">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="d-flex justify-content-lg-center">
+                <figure class="thumbnail flex-lg-column">
+                    <img class="value-img" src="images/Diversity.svg" alt="Image 1">
+                    <figcaption>Diversity of background</figcaption>
+                </figure>
+              </div>
+            </div> 
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="d-flex justify-content-lg-center">
+                <figure class="thumbnail flex-lg-column">
+                    <img class="value-img" src="images/Team-Spirit.svg" alt="Image 2">
+                    <figcaption>Team spirit</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="d-flex justify-content-lg-center">
+                <figure class="thumbnail flex-lg-column">
+                    <img class="value-img" src="images/Solidarity-Collaboration.svg" alt="Image 3">
+                    <figcaption>Solidarity and collaboration</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="d-fvlex justify-content-lg-center">
+                <figure class="thumbnail flex-lg-column">
+                    <img class="value-img" src="images/Personnal-Development-v2.svg" alt="Image 4">
+                    <figcaption>Personal development</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="last-element"></div>
+    </section>
+  <!-- Section Our value End -->
+
+  <!-- Section Services -->
+  <section id="services">
+    <div class="first-element"></div>
+    <div class="container-md services-container p-0">
+      <h2 class="big-heading mx-3">Our Services</h2>
+        <div class="row justify-content-end g-0" id="ux">
+          <!-- UX/UI Design -->
+          <div class="col-12 col-md-6 services-specs">
+              <h3 class="medium-heading">UX/UI Designers:</h3>
+              <h4 class="small-heading">Crafting creative solutions with the user in mind</h4>
+              <div class="d-md-none">
+                <p>
+                  Our <strong>UX/UI designers</strong> combine <strong>creativity, technical expertise</strong>, and a <strong>user-first approach</strong> to deliver high-quality digital experiences:
+                </p>
+                <ul>
+                  <li><strong>Purposeful design:</strong> Prototypes, wireframes, user flows, and mockups aligned with your business objectives.</li>
+                  <li><strong>Advanced tools:</strong> Proficiency in Figma, Adobe CC, and responsive design systems to ensure polished results.</li>
+                  <li><strong>Scalable solutions:</strong> Incorporating design systems, SEO, user research, and usability testing for impactful outcomes.</li>
+                  <li><strong>Visual production:</strong> Expertise in creating custom images, illustrations, and animations that bring your brand to life.</li>
+                  <li><strong>Seamless collaboration:</strong> Agile, adaptive professionals who deliver on time and align with your goals.</li>
+                </ul>
+              </div>
+              <div class="d-none d-md-block">
+                <p>
+                  The UX/UI designers bring a perfect mix of creativity, technical skills, and a user-first mindset to every project. They are equipped to:
+                </p>
+                <UL>
+                  <LI><strong>Design with purpose:</strong> By crafting prototypes, wireframes, and user flows, they ensure every design meets your business objectives and resonates with your audience.</LI>
+                  <LI><strong>Leverage top-tier tools:</strong> With expertise in tools like Figma, Adobe CC, and other leading software, they create polished, professional designs.</LI>
+                  <LI><strong>Deliver scalable solutions:</strong> They incorporate responsive design, design systems, and even SEO practices to ensure your digital presence performs at every level.</LI>
+                  <LI><strong>Bridge design and strategy:</strong> Grounded in user research, information architecture, and usability testing, they combine creativity with data-driven decision-making.</LI>
+                  <LI><strong>Visual production:</strong> Expertise in creating custom images, illustrations, and animations that bring your brand to life.</LI>
+                  <LI><strong>Collaborate seamlessly:</strong> Thriving in agile environments, they adapt quickly and work closely with your teams to deliver solutions on time.</LI>
+                </UL>
+                <P>
+                  Our UX/UI designers don&#39;t just create designs—they deliver experiences that leave a lasting impact.
+                </P>
+              </div>  
+          </div>
+        </div>
+        <div class="row g-0" id="int">
+          <!-- Integration and Publishing -->
+          <div class="col-12 col-md-8 services-specs">
+            <h3 class="medium-heading">Publishers and Front-End integrators: </h3>
+            <h4 class="small-heading">Bringing your vision to life</h4>
+
+            <div class="d-md-none">
+              <P>
+                Our <strong>publishers and integrators</strong> ensure your website is both visually stunning and functionally seamless:
+              </P>
+              <ul>
+                <li>
+                  <strong>Technical mastery:</strong> Experts in HTML, CSS, JavaScript, jQuery, and CMS platforms.
+                </li>
+                <li>
+                  <strong>Performance-driven:</strong> Prioritizing SEO, speed, and design consistency for measurable success.
+                </li>
+                <li>
+                  <strong>Pixel-perfect execution:</strong> Attention to detail in every project phase.
+                </li>
+                <li>
+                  <strong>Collaboration ready:</strong> Agile professionals who adapt to your timelines and needs.
+                </li>
+              </ul>
+            </div>
+            <div class="d-none d-md-block">
+              <p>
+                Our <strong>publishers and integrators</strong> specialize in translating your ideas into functional, high-performing digital assets. Here&#39;s how they support your business:
+              </p>
+              <ul>
+                <li>
+                  <strong>Technical excellence:</strong> Proficient in HTML, CSS, JavaScript, and jQuery, they build responsive websites that are as beautiful as they are efficient.             
+                </li>
+                <li>
+                  <strong>Content mastery:</strong> With deep experience in CMS platforms and web components, they ensure your content is presented flawlessly across all devices.           
+                </li>
+                <li>
+                  <strong>Optimized for success:</strong> They focus on performance, SEO, and maintaining design consistency to ensure your website achieves measurable results.              
+                </li>
+                <li>
+                  <strong>Precision and care:</strong> Every detail matters. Our team ensures pixel-perfect execution, leaving nothing to chance.            
+                </li>
+                <li>
+                  </strong>Collaboration-focused:</strong> Working in agile environments, they adapt to your needs and timelines while ensuring smooth communication throughout the process.              
+                </li>
+              </ul>
+              <p>
+                With their technical skills and dedication to quality, our publishers and integrators ensure your website not only looks great but also functions seamlessly.
+              </p>
+            </div>  
+
+            
+          </div>
+          <div class="col-4 col-lg-4"></div>
+        </div>
+    </div>
+    <div class="last-element"></div>
+  </section>
+  <!-- Section Services End -->
+
+  <!-- Section Vacancies -->
+  <section id="vacancies">
+    <div class="first-element"></div>
+    <div class="container-md">
+      <h2 class="big-heading">Grow with us</h2>
+      <div id="job-requirements" class="row g-3 spacing">
+        <h3 class="medium-heading">We are always looking for new talents</h3>
+        <!--
+        <div class="row spacing">
+          <div class="col-12 col-md-6">
+            <div class="col-12 col-md-10 col-lg-8 d-grid gap-2">
+              <a class="btn btn-light btn-color" href="https://www.linkedin.com/company/doitfast/"><b>Check out our open jobs !</b>&nbsp;&nbsp;<i id="icon-btn" class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        -->
+        <div class="row spacing">
+          <div class="col-12">
+            <div class="accordion rounded" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    UX/UI Designer
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <p>
+                      As a <strong>UX/UI Designer</strong>, you&#39;ll work closely with copywriters, developers, and integrators to create seamless digital experiences across mobile, web, and TV platforms. You&#39;ll transform wireframes into polished UI designs, develop prototypes, and communicate design concepts to stakeholders. You&#39;ll also create custom images, illustrations, and animations as needed.
+                    </p>
+                    <p><strong>Your profile</strong></p>
+                    <ul>
+                      <li>
+                        Degree and experience in UX/UI design
+                      </li>
+                      <li>
+                        Proficient in <strong>Figma</strong> and <strong>Adobe Creative Suite</strong>
+                      </li>
+                      <li>
+                        Experience with <strong>Agile, Design Systems</strong>, and <strong>UI Kits</strong>
+                      </li>
+                      <li>
+                        Basic <strong>HTML/CSS</strong> knowledge is a plus
+                      </li>
+                      <li>
+                        Fluent in <strong>EN</strong>
+                      </li>
+                      <li>
+                        Collaborative team player
+                      </li>
+                    </ul>
+                    <p><strong>Our offer</strong></p>
+                    <ul>
+                      <li>
+                        Flexible homeworking
+                      </li>
+                      <li>
+                        Ongoing personal development training
+                      </li>
+                      <li>
+                        Competitive salary package
+                      </li>
+                      <li>
+                        A supportive team
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="accordion-specs-3" class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Publisher/Front-End Integrator
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+
+                    <p>
+                      As a <strong>Publisher/Front-End Integrator</strong>, you&#39;ll work closely with designers and developers to transform digital designs into responsive, high-performance websites. You will ensure the seamless integration of content across platforms, focusing on functionality, design consistency, and optimization for SEO and performance.
+                    </p>
+                    <p><strong>Your profile</strong></p>
+                    <ul>
+                      <li>
+                        Experience in front-end development and web integration
+                      </li>
+                      <li>
+                        Experience with <strong>CMS platforms, web components</strong>, and <strong>SEO</strong> best practices
+                      </li>
+                      <li>
+                        Knowledge of <strong>performance optimization</strong> and responsive design
+                      </li>
+                      <li>
+                        <strong>HTML, CSS</strong>, notions of <strong>JavaScript</strong>, and <strong>jQuery</strong> knowledge is a plus
+                      </li>
+                      <li>
+                        Ability to work in <strong>Agile</strong> environments and collaborate with cross-functional teams
+                      </li>
+                      <li>
+                        Fluent in <strong>EN</strong>
+                      </li>
+                      <li>
+                        Detail-oriented with a focus on quality and precision
+                      </li>
+                    </ul>
+                    <p><strong>Our offer</strong></p>
+                    <ul>
+                      <li>
+                        Flexible homeworking
+                      </li>
+                      <li>
+                        Ongoing personal development training
+                      </li>
+                      <li>
+                        Competitive salary package
+                      </li>
+                      <li>
+                        A supportive team
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row spacing">
+        <div class="col-12 col-md-6">
+          <h3 class="medium-heading">How to apply?</h3>
+          <p>Send us an email with your CV, we will contact you as soon as possible.</p>
+          <div class="col-12 col-md-10 col-lg-8 d-grid gap-2">
+            <a class="btn btn-light btn-color-cv" href="mailto:info@doitfast.be?subject=Application%20CV%20-%20Do%20IT%20Fast&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20joining%20your%20team.%20Please%20find%20my%20CV%20attached.%0D%0A%0D%0ABest%20regards"><b>Send my CV</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="last-element"></div>
+  </section>
+  <!-- Section Vacancies End -->  
+
+  <!-- Section Contacts -->
+  <section id="contacts" class="container-md">
+    <div class="first-element"></div>
+    <h2 class="big-heading mb-3">Let&#39;s get in touch</h2>
+    <div>
+      <div class="row g-0">
+        <div class="col-12 d-lg-flex">
+          <div class="col-12 col-lg-2 mb-1">
+            <h4><strong>E-mail address</strong></h4>
+            <p><a class="text-decoration-none text-light" href="mailto:info@doifast.be">info@doifast.be</a></p>
+          </div>
+          <div class="col-12 col-lg-2 mb-1">
+            <h4><strong>Phone Number</strong></h4>
+            <p>+32 477 59 15 95 <br>(Whatsapp)</p>
+          </div>
+          <div class="col-12 col-lg-2 mb-1">
+            <h4><strong>Address</strong></h4>
+            <p>Avenue des Attelages 24 <br>1325 Dion-Valmont</p>
+          </div>
+          <div class="col-12 col-lg-2 mb-1">
+            <h4><strong>VAT</strong></h4>
+            <p>Do IT Fast<br>
+              BE 0769.722.318</p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h4><strong>Follow us</strong></h4>
+            <p><a href="https://www.linkedin.com/company/doitfast/" target="_blank"><i class="bi bi-linkedin medium-heading"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="last-element"></div>
+  </section>
+  <!-- Section Contacts End -->
+  
+  <!-- Footer -->
+  <footer class="container-md py-3 my-4 border-top">
+    <div class="row g-0">
+      <div class="col-12 footer-details">
+        <img class="logo-footer" src="./images/logo_header.svg" alt="logo doit">
+        <p class="m-2">All rights reserved.&copy;2025 Do iT Fast <br>VAT BE 0769.722.318</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Scripts -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
