@@ -230,6 +230,10 @@ section {
   justify-content: center; /* Centrer verticalement */
 }
 
+.modal-content-nav ul li a i{
+  margin-right: 20px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .modal-content-nav {
     flex: 1;
