@@ -33,8 +33,8 @@ function setEqualHeight() {
 
 
 // Run the initialization
-setEqualHeight();
+//setEqualHeight();
 
 // Delay initial call and add it to the end of the event queue
-window.addEventListener('resize', setEqualHeight);
+//window.addEventListener('resize', setEqualHeight);
 

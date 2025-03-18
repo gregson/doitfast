@@ -352,7 +352,7 @@ section {
     height: 30px;
   }
   #sideNav li a{
-    font-size: 48px;
+    font-size: 45px; /* to avoid menu wrap in 320px*/
   }
 }
 
@@ -407,7 +407,7 @@ figure{
 
 @media (max-width: 480px){
   .carousel-inner{
-    height: auto;
+    /*height: auto;*/
     /*height: 90vh;*/
   }
 }
