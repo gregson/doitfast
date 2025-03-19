@@ -356,7 +356,7 @@ section {
     height: 30px;
   }
   #sideNav li a{
-    font-size: 45px; /* to avoid menu wrap in 320px*/
+    font-size: 44px; /* to avoid menu wrap in 320px and 375*/
   }
 }
 
@@ -618,7 +618,7 @@ figure{
 }
 
 
-media (min-width: 992px) {
+@media (min-width: 992px) {
   #int{
     background-image: url(../images/assets-doit-publishing-l.png);
   }
